@@ -1,0 +1,1765 @@
+# ===========================================================================
+#  Phoenix — messages.yml   ·   modern set
+# 
+#  Written in place of the default set on 1.16 and newer, where hex and
+#  gradients render. Same wording and layout as the default; deeper colour.
+# 
+#  REQUIRES  mini-message: true  in config.yml, which the plugin turns on for
+#  you when it writes this file. Without it the <gradient:...> tags below are
+#  printed rather than parsed.
+# 
+#  THREE KEYS RECOLOUR THE NETWORK — global.yml, under network.colors:
+#      main       &#FF3B6B   the subject of the sentence: names and values
+#      secondary  &#E91E63   structure: the lore rail, bullets, marks
+#      middle     &#C9C4C6   body prose
+#  The literal hex below is the supporting palette and is not themed:
+#      #F5F1F2 bright   #8A7F84 muted    #5A4A50 rail
+#      #4ADE80 success  #FBBF24 caution  #7DD3FC staff channel
+#  Gradients carry their own hex too, so they do not follow the three keys.
+# 
+#  MARKS   ✓ done    ✗ refused or issued    ⚑ needs attention
+#          ● list row    ┃ lore rail    » action or breadcrumb
+# ===========================================================================
+
+error:
+  player-not-online: "<main>✗ <bright><player><middle> is currently not online."
+  profile-doesnt-exist: "<main>✗ <middle>There was no user entry found for <bright><player><middle>."
+  rank-doesnt-exist: "<main>✗ <middle>The rank <bright><rank><middle> doesn't exist."
+  chat-snapshot-doesnt-exist: "<main>✗ <middle>The chat snapshot <bright><chatSnapshot><middle> doesn't exist."
+  notification-doesnt-exist: "<main>✗ <middle>The notification <bright><notification><middle> doesn't exist."
+  ladder-doesnt-exist: "<main>✗ <middle>The punishment ladder <bright><ladder><middle> doesn't exist."
+  tag-doesnt-exist: "<main>✗ <middle>The tag <bright><tag><middle> doesn't exist."
+  tag-category-doesnt-exist: "<main>✗ <middle>The category <underlined><category></underlined><middle> doesn't exist."
+  server-doesnt-exist: "<main>✗ <middle>The server <bright><server><middle> doesn't exist."
+  server-not-online: "<main>✗ <middle>The server <bright><server><middle> is not online."
+  proxy-doesnt-exist: "<main>✗ <middle>The proxy <bright><proxy><middle> doesn't exist."
+  skin-doesnt-exist: "<main>✗ <middle>The skin <bright><skin><middle> doesn't exist."
+  filter-doesnt-exist: "<main>✗ <middle>The filter <bright><filter><middle> doesn't exist."
+  voidreason-doesnt-exist: "<main>✗ <middle>The void reason <bright><reason><middle> doesn't exist."
+  global-chat-disabled: "<main>✗ <middle>You have global chat disabled."
+  server-loading: "<main>✗ <middle>The server is currently loading... Please wait!"
+  cant-chat-while-banned: "<main>✗ <middle>You can not chat while being banned/blacklisted."
+  invalid-scope: "<main>✗ <bright><input><middle> is an invalid scope. <muted>(Examples: s:Hub-01, g:Hubs, global)<middle>."
+  invalid-scopes: "<main>✗ <bright><input><middle> are invalid scopes. <muted>(Examples: s:Hub-01;g:Hubs;global)<middle>."
+  operator-disabled: "<main>✗ <middle>Operator has been disabled via Phoenix."
+  multiple-profiles-with-same-name: "<main>There was a total of <#FBBF24><entries><main> user entries found for <#FBBF24><player><main>:"
+  multiple-profiles-name: "<muted><number>. <#FBBF24><name> <muted>(<uuid>) <#4ADE80><bold>[Click to execute]</bold>"
+  multiple-players-match: "<main>✗ <middle>Multiple players matched <bright><search> <middle>(<all>), please be more specific."
+  invalid-username: "<main>✗ <middle><name> <middle>is not a valid username."
+  invalid-enchantment: "<main>✗ <middle><name> <middle>is not a valid enchantment."
+  message-already-deleted: "<main>✗ <middle>You have already deleted this message."
+  moved-to-default: "<main>✗ <middle>You're no longer able to use this chat channel and have been moved to <#FBBF24>Default<middle>."
+  profile-not-loaded: "<main>✗ <middle>Profile is not loaded."
+  profile-not-cached: "<main>✗ <middle>You tried chatting before your profile has been cached."
+  moved-to-default-channel: "<main>✗ <middle>You've been moved to the default channel."
+  paste-failed: "<main>✗ <middle>An error occurred while creating the paste. Check console."
+  split-permissions: "<main>✗ <middle>Split permissions with ;."
+  positive-number: "<main>✗ <middle>Please use a positive number."
+  invalid-file-name: "<main>That is not a file name."
+
+general:
+  spawn-updated: "<#4ADE80>✓ <middle>You have updated the spawn location."
+  spawn-teleported: "<#4ADE80>✓ <middle>You have been teleported to the spawn."
+  send-server: "<middle>You are being sent to <main><server><middle>."
+  chat-mention: "<middle>You have been mentioned by <main><player><middle>."
+  channel-switched: "<middle>You have changed to the <main><channel> <middle>channel."
+  toggle-setting-on: "<#4ADE80>✓ <middle>You have enabled your <setting>."
+  toggle-setting-off: "<main>✗ <middle>You have disabled your <setting>."
+  generic-view-message: "<middle>Viewing <main><type> <middle>of <player><middle>..."
+  generic-clear-message: "<middle>You have removed <main><size> <middle><type> from <player><middle>."
+  generic-list-header-format: "<gradient:#FF3B6B:#E91E63><bold>SHOWING</bold></gradient> <rail>» <middle><type>"
+  generic-list-header-advanced-format: "<gradient:#FF3B6B:#E91E63><bold>SHOWING</bold></gradient> <rail>» <middle><type> <rail>of <middle><otherType>"
+  generic-list-format: " <secondary>● <middle>"
+  generic-list-footer-format: "<muted>Page <middle><page><muted>/<middle><pages> <rail>(<results> results)"
+  generic-list-color-has-other-page: "<#4ADE80>"
+  generic-list-color-no-other-page: "<main>"
+  generic-list-next-page-format: " »»"
+  generic-list-previous-page-format: "«« "
+  generic-list-and: "and"
+  rank-list-format: "<displayName> <rail>┃ <middle><name>"
+  already-have-permission: "<main>✗ <middle>Player <bright><player> <middle>already has <bright><permission> <middle>permission."
+  dont-have-permission: "<main>✗ <middle>Player <bright><player> <middle>doesn't have <bright><permission> <middle>permission."
+  permission-added: "<middle>Added <main><permission> <muted>(<duration>) <middle>permission to <main><player><middle>."
+  permission-removed: "<middle>Removed <main><permission> <middle>permission from <main><player><middle>."
+  permission-cleared: "<middle>Cleared <main><player><middle>'s permissions."
+  kick-server-full: "<main>✗ <middle>The server is currently full."
+  message:
+    private-message-sender: "<muted>(To <main><target><muted>) <bright><message>"
+    private-message-target: "<muted>(From <main><sender><muted>) <bright><message>"
+    no-one-to-reply: "<main>✗ <middle>You do not have anyone to reply to."
+    messages-toggled-off: "<main>✗ <middle>You have your messages toggled off."
+    messages-toggled-off-target: "<bright><player><main> has their messages toggled off."
+    cant-message-self: "<main>✗ <middle>You can not message yourself."
+  ignore:
+    cant-ignore-self: "<main>✗ <middle>You can not ignore yourself."
+    already-ignoring: "<main>✗ <middle>You are already ignoring <bright><player><middle>."
+    not-ignoring: "<main>✗ <middle>You are not currently ignoring <bright><player><middle>."
+    being-ignorred: "<bright><player><main> is ignoring you."
+    names: "<#4ADE80><names>"
+    currently-ignoring: "<main>✗ <middle>You are currently ignoring <bright><player><middle>."
+    no-ignores: "<main>✗ <middle>You are not currently ignoring anybody."
+    ignore-added: "<middle>You are now ignoring <main><player><middle>."
+    ignore-removed: "<middle>You are no longer ignoring <main><player><middle>."
+    format:
+      - "<main><bold>Ignore List</bold>"
+      - " <secondary>● <middle><names>"
+  list:
+    message:
+      - "<middle>"
+      - "<ranks><muted>."
+      - "<middle>"
+      - "<muted>(<main><online><muted>/<main><max><muted>): <players><muted>."
+    seperator: "<muted>, "
+    showing-max-players: "<main>✗ <middle>(Only showing the first 350 players)"
+  media-list:
+    message:
+      - ""
+      - "<main><bold>Media List</bold>"
+      - "<servers>"
+      - ""
+    format: " <secondary>● <middle><server>: <middle><players><muted>."
+    disguised: " <muted>(Disguised)"
+    seperator: "<middle>, "
+  staff-list:
+    message:
+      - ""
+      - "<main><bold>Staff List</bold>"
+      - "<servers>"
+      - ""
+    format: " <secondary>● <middle><server>: <players><muted>."
+    seperator: "<middle>, "
+  server-status:
+    online: "<#4ADE80>Online"
+    whitelisted: "<#FBBF24>⚑ <middle>Whitelisted"
+    offline: "<main>Offline"
+  help:
+    usage: "<#FBBF24>⚑ <muted>Usage <middle><usage>"
+    no-commands-matched-search: "<main>✗ <middle>No command matched <bright><search><middle>."
+    no-results: "<main>✗ <middle>No more results."
+    header: "<gradient:#FF3B6B:#E91E63><bold>HELP</bold></gradient> <rail>» <middle><command>"
+    search-header: "<gradient:#FF3B6B:#E91E63><bold>HELP</bold></gradient> <rail>» <middle><command> <muted><search>"
+    format: "<rail>● <main><command> <middle><parameters>"
+    format-with-description: "<rail>● <main><command> <middle><parameters> <muted><description>"
+    footer: "<previousPage> <muted>Page <middle><page><muted>/<middle><totalPages> <rail>(<results> results) <nextPage>"
+    next-page: "<#4ADE80>»"
+    next-page-hover: "<muted>Click to go to the next page."
+    previous-page: "<main>« "
+    previous-page-hover: "<muted>Click to go to the previous page."
+
+  # Some miscellaneous strings used in Punishments/Grants
+  misc:
+    expired: "Expired"
+    permanent: "Permanent"
+    never: "Never"
+
+rank:
+  already-exists: "<main>✗ <middle>The rank <bright><rank> <middle>already exists."
+  created: "<middle>You have created rank <main><rank><middle>."
+  cloned: "<middle>You have cloned rank <main><rank> <middle>-> <main><newRank><middle>."
+  deleted: "<middle>You have deleted rank <main><rank><middle>."
+  price-updated: "<middle>You have updated price of <main><rank> <middle>to <main><price><middle>."
+  priority-updated: "<middle>You have updated priority of <main><rank> <middle>to <main><priority><middle>."
+  playerlist-prefix: "<middle>You have updated the player list prefix of <main><rank> <middle>to <main><prefix><middle>."
+  color-updated: "<middle>You have updated the color of <main><rank> <middle>rank to <main><color>Color<middle>."
+  chatcolor-updated: "<middle>You have updated the chat color of <main><rank> <middle>rank to <main><color>Color<middle>."
+  prefix-updated: "<middle>You have updated the prefix of <main><rank> <middle>rank to <main><prefix><middle>."
+  suffix-updated: "<middle>You have updated the suffix of <main><rank> <middle>rank to <main><suffix><middle>."
+  display-updated: "<middle>You have updated the display of <main><rank> <middle>rank to <main><displayName><middle>."
+  name-updated: "<middle>You have updated the name of <main><rank> <middle>rank to <main><name><middle>."
+  rank-info:
+    - ""
+    - "<main><rank><middle>'s Information"
+    - " <secondary>● <middle>UUID: <main><uuid>"
+    - " <secondary>● <middle>Name: <main><name>"
+    - " <secondary>● <middle>Scopes: <main><scopes>"
+    - " <secondary>● <middle>Priority: <main><priority>"
+    - " <secondary>● <middle>Grantable: <main><grantable>"
+    - ""
+    - " <secondary>● <middle>Prefix: <main><prefix> <muted>(Modern: <prefixModern><muted>)"
+    - " <secondary>● <middle>Playerlist Prefix: <main><playerList> <muted>(Modern: <playerListPrefixModern><muted>)"
+    - " <secondary>● <middle>Suffix: <main><suffix> <muted>(Modern: <suffixModern><muted>)"
+    - " <secondary>● <middle>Color: <main><color> <muted>(Modern: <colorModern><muted>)"
+    - " <secondary>● <middle>Price: <main><price>"
+    - ""
+    - " <secondary>● <middle>Staff: <main><staff>"
+    - " <secondary>● <middle>Subscription: <main><subscription>"
+    - " <secondary>● <middle>Visible: <main><visible>"
+    - " <secondary>● <middle>Purchasable: <main><purchasable>"
+    - " <secondary>● <middle>Default: <main><default>"
+
+  # The rank tooling that has no menu behind it: colours, links, importing and searching.
+  tools:
+    shadow-set: "<#4ADE80>✓ <middle>Set the shadow colour on <bright><rank><middle> to <bright><hex><middle>."
+    shadow-cleared: "<#4ADE80>✓ <middle>Cleared the shadow colour on <bright><rank><middle>."
+    shadow-invalid: "<main>✗ <middle>'<hex>' is not a hex colour. Use <bright>#RRGGBB<middle>, or <bright>#RRGGBBAA<middle> to set the alpha."
+    link-added: "<#4ADE80>✓ <middle>Added a server link to <bright><rank><middle>, now <bright><amount><middle>."
+    link-removed: "<#4ADE80>✓ <middle>Removed <bright><link><middle> from <bright><rank><middle>."
+    links-cleared: "<#4ADE80>✓ <middle>Cleared the server links on <bright><rank><middle>."
+    link-invalid-type: "<main>✗ <middle>'<type>' is not a link type. Use <bright>CUSTOM<middle> or one of: <bright><types>"
+    link-needs-label: "<main>✗ <middle>A <bright>CUSTOM<middle> link needs a label: <bright>/rank links add <rank> CUSTOM <url> <label>"
+    link-not-stored: "<main>✗ <middle>That link could not be stored. Check the url."
+    link-not-found: "<main>✗ <middle>There is no link <bright><index><middle>. Use <bright>/rank links list<middle> to see them."
+    nothing-set: "<bright><rank><main> has no <type> set."
+    search-in-progress: "<main>✗ <middle>A search is already being performed. Please wait..."
+    search-fetching: "<muted>Fetching players..."
+    search-took: "<muted>Fetching took <time>ms."
+    exported: "<#4ADE80>✓ <middle>All ranks have been exported to <#FBBF24>ranks.json<middle>."
+    imported: "<#4ADE80>✓ <middle>All ranks have been successfully imported."
+    file-missing: "<main>✗ <middle>A <#FBBF24>ranks.json<middle> file is not present."
+    preset-file-missing: "<main>✗ <middle>A <#FBBF24>ranks-preset.json<middle> file is not present."
+  rank-hover:
+    set: "<middle>You have updated the chat hover of <main><rank> <middle>rank."
+    cleared: "<middle>You have cleared the chat hover of <main><rank> <middle>rank."
+    url-set: "<middle>You have set the chat hover URL of <main><rank> <middle>rank to <main><url><middle>."
+    url-cleared: "<middle>You have cleared the chat hover URL of <main><rank> <middle>rank."
+    view-header: "<middle>Hover preview for <main><rank> <middle>(hover the prefix below):"
+  rank-perms:
+    command-doesnt-exist: "<main>✗ <middle>That command does not exist."
+    command-doesnt-have-permission: "<main>✗ <middle>That command does not have a permission or it hasn't been detected correctly."
+    already-has-permission: "<main>✗ <middle>The rank <bright><rank> <middle>already has <bright><perm> <middle>permission."
+    doesnt-have-permission: "<main>✗ <middle>The rank <bright><rank> <middle>does not have <bright><perm> <middle>permission."
+    added: "<middle>You have added <main><perm> <middle>permission to <main><rank> <middle>rank."
+    set-scopes: "<middle>You have set the scopes of <main><perm> <middle>permission to <main><scopes><middle>."
+    removed: "<middle>You have remove <main><perm> <middle>permission from <main><rank> <middle>rank."
+    cleared: "<middle>You have cleared the permissions of <main><rank> <middle>rank."
+  rank-state:
+    default-on: "<middle>Rank <main><rank> <middle>is now a default rank."
+    default-off: "<middle>Rank <main><rank> <middle>is no longer a default rank."
+    staff-on: "<middle>Rank <main><rank> <middle>is now a staff rank."
+    staff-off: "<middle>Rank <main><rank> <middle>is no longer a staff rank."
+    sub-on: "<middle>Rank <main><rank> <middle>is now a subscription rank."
+    sub-off: "<middle>Rank <main><rank> <middle>is no longer a subscription rank."
+    purchasable-on: "<middle>Rank <main><rank> <middle>is now a purchasable rank."
+    purchasable-off: "<middle>Rank <main><rank> <middle>is no longer a purchasable rank."
+    grantable-on: "<middle>Rank <main><rank> <middle>is now grantable."
+    grantable-off: "<middle>Rank <main><rank> <middle>is no longer grantable."
+    visible-on: "<middle>Rank <main><rank> <middle>is now visible."
+    visible-off: "<middle>Rank <main><rank> <middle>is no longer visible."
+  rank-scopes:
+    already-has: "<main>✗ <middle>The rank <bright><rank> <middle>already has <bright><scope> <middle>scope."
+    doesnt-have: "<main>✗ <middle>The rank <bright><rank> <middle>does not have <bright><scope> <middle>scope."
+    added: "<middle>You have added <main><scope> <middle>scope to <main><rank> <middle>rank."
+    removed: "<middle>You have removed <main><scope> <middle>scope from <main><rank> <middle>rank."
+  rank-inheritance:
+    already-has: "<main>✗ <middle>The rank <bright><rank> <middle>already inherits from <bright><inheritance><middle>."
+    locked:
+      - "<main><childRank><main> can not inherit from <rank><main> because of a dependency lock caused by <causedRank><main>."
+      - "<middle>"
+      - "<main>A dependency lock means that rank A can not inherit rank B because rank A indirectly"
+      - "<main>inherits rank B or vice-versa, which would recursively try to collect inheritance"
+      - "<main>resulting in a lock, or a never-ending execution stack."
+    doesnt-have: "<main>✗ <middle>The rank <bright><rank> <middle>does not inherit from <bright><inheritance><middle>."
+    added: "<middle>Rank <main><rank> <middle>now inherits from <main><inheritance><middle>."
+    removed: "<middle>Rank <main><rank> <middle>no longer inherits from <main><inheritance><middle>."
+    cleared: "<#4ADE80>✓ <middle>You have cleared all inheritances."
+    added-to-all: "<middle>You have made all ranks inherit from <main><inheritance><middle>."
+    from-start: "<middle>Made <main>all ranks <middle>inherit from the one before them."
+
+punishment:
+  immune: "<bright><player><main> is immune from punishments."
+  already-punished: "<bright><player><main> is already <type>."
+  not-punished: "<bright><player><main> is not <type>."
+  cant-talk-while-banned-or-blacklisted: "<main>✗ <middle>You cannot chat while being banned/blacklisted."
+  voided-all: "<#4ADE80>✓ <middle>Done... Voided all currently active <type>."
+
+  # Shown after a network-wide wipe. Worth keeping the wording explicit:
+  # these delete the punishment type for every player, not for one of them.
+  kicks-wiped: "<#4ADE80>✓ <middle>Deleted <bright><amount><middle> kicks <muted>(every player on the network)."
+  warns-wiped: "<#4ADE80>✓ <middle>Deleted <bright><amount><middle> warns <muted>(every player on the network)."
+
+  # Shown when a wipe is run without -confirm. These are the most destructive
+  # commands in the plugin, so the prompt names the scope rather than implying it.
+  wipe-confirm:
+    - ""
+    - "<gradient:#FF5F6D:#C81E4A><bold>HOLD ON</bold></gradient>"
+    - "<middle>This deletes every <type> on record, for <underlined>every player on the network</underlined> -- not for one of them."
+    - "<middle>It cannot be undone."
+    - ""
+    - "<muted>Run <bright><command> -confirm <muted>if that is what you meant."
+    - ""
+  higher-priority: "<main>✗ <middle>You cannot punish <bright><player><middle> because their priority is higher."
+  lookup-invalid-id: "<main>✗ <middle>ID <bright>#<id> <middle>is invalid."
+  voided: "<middle>You have voided punishment <secondary>#<id><middle> as <secondary><void_reason><middle>."
+  punishment-duration-too-large: "<main>✗ <middle>You don't have permission to use such a long duration."
+  invalid-duration: "<main>✗ <middle>You've provided an invalid duration."
+  punishment-executed: "<silent><#4ADE80>✓ <middle>You have <type> <player> <middle>for <main><reason><middle>."
+  silent: "<rail>(Silent) "
+
+  # Asked of the staff member when a punishment needs evidence and has none.
+  proof-prompt: "<#FBBF24>⚑ <middle>Link the evidence for this <type><middle>, or type 'cancel' to stop."
+  proof-cancelled: "<main>✗ <middle>No evidence given, so nothing was issued."
+  blacklist:
+    default-reason: "Misconduct"
+    broadcast: "<silent><main>✗ <sender><middle> blacklisted <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+    kick-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>BLACKLISTED</bold></gradient>"
+      - ""
+      - "<middle>This account is permanently removed from the network."
+      - ""
+      - "<muted>Reason: <bright><reason>"
+      - "<muted>Punishment ID: <bright>#<punishmentID>"
+      - ""
+      - "<rail>This punishment cannot be appealed."
+      - ""
+    alt-kick-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>BLACKLISTED</bold></gradient>"
+      - ""
+      - "<middle>This account is permanently removed from the network."
+      - ""
+      - "<muted>Reason: <bright><reason>"
+      - "<muted>Punishment ID: <bright>#<punishmentID>"
+      - "<muted>Alt: <bright><alt>"
+      - ""
+      - "<rail>This punishment cannot be appealed."
+      - ""
+  unblacklist:
+    default-reason: "Pardoned"
+    broadcast: "<silent><#4ADE80>✓ <sender><middle> unblacklisted <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+  ban:
+    default-reason: "Cheating"
+    broadcast: "<silent><main>✗ <sender><middle> permanently banned <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+    kick-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>BANNED</bold></gradient>"
+      - ""
+      - "<middle>This account is banned from the network."
+      - ""
+      - "<muted>Reason: <bright><reason>"
+      - "<muted>Punishment ID: <bright>#<punishmentID>"
+      - ""
+      - "<muted>Appeal at <main><discord>"
+      - ""
+  ipban:
+    default-reason: "Cheating"
+    broadcast: "<silent><main>✗ <sender><middle> permanently ip-banned <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+    kick-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>IP BANNED</bold></gradient>"
+      - ""
+      - "<middle>This address is banned from the network."
+      - ""
+      - "<muted>Reason: <bright><reason>"
+      - "<muted>Punishment ID: <bright>#<punishmentID>"
+      - ""
+      - "<muted>Appeal at <main><discord>"
+      - ""
+    alt-kick-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>IP BANNED</bold></gradient>"
+      - ""
+      - "<middle>This address is banned from the network."
+      - ""
+      - "<muted>Reason: <bright><reason>"
+      - "<muted>Punishment ID: <bright>#<punishmentID>"
+      - "<muted>Alt: <bright><alt>"
+      - ""
+      - "<muted>Appeal at <main><discord>"
+      - ""
+  tempban:
+    default-reason: "Cheating"
+    broadcast: "<silent><main>✗ <sender><middle> temporarily banned <target> for <secondary><duration><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+      - "<middle>Duration: <main><duration>"
+    kick-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>TEMPORARILY BANNED</bold></gradient>"
+      - ""
+      - "<middle>This account is banned from the network for now."
+      - ""
+      - "<muted>Reason: <bright><reason>"
+      - "<muted>Punishment ID: <bright>#<punishmentID>"
+      - "<muted>Expires in: <bright><expire>"
+      - ""
+      - "<muted>Appeal at <main><discord>"
+      - ""
+  tempipban:
+    default-reason: "Cheating"
+    broadcast: "<silent><main>✗ <sender><middle> temporarily ip-banned <target> for <secondary><duration><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+      - "<middle>Duration: <main><duration>"
+    kick-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>TEMPORARILY IP BANNED</bold></gradient>"
+      - ""
+      - "<middle>This address is banned from the network for now."
+      - ""
+      - "<muted>Reason: <bright><reason>"
+      - "<muted>Punishment ID: <bright>#<punishmentID>"
+      - "<muted>Expires in: <bright><expire>"
+      - ""
+      - "<muted>Appeal at <main><discord>"
+      - ""
+    alt-kick-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>TEMPORARILY IP BANNED</bold></gradient>"
+      - ""
+      - "<middle>This address is banned from the network for now."
+      - ""
+      - "<muted>Reason: <bright><reason>"
+      - "<muted>Punishment ID: <bright>#<punishmentID>"
+      - "<muted>Expires in: <bright><expire>"
+      - "<muted>Alt: <bright><alt>"
+      - ""
+      - "<muted>Appeal at <main><discord>"
+      - ""
+  unban:
+    default-reason: "Pardoned"
+    broadcast: "<silent><#4ADE80>✓ <sender><middle> unbanned <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+  competitive-ban:
+    default-reason: "Boosting"
+    broadcast: "<silent><main>✗ <sender><middle> competitively banned <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+  competitive-tempban:
+    default-reason: "Boosting"
+    broadcast: "<silent><main>✗ <sender><middle> competitively banned <target> for <secondary><duration><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+      - "<middle>Duration: <main><duration>"
+  competitive-unban:
+    default-reason: "Pardoned"
+    broadcast: "<silent><#4ADE80>✓ <sender><middle> competitively unbanned <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+  mute:
+    default-reason: "Spamming"
+    broadcast: "<silent><main>✗ <sender><middle> permanently muted <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+    message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>YOU HAVE BEEN MUTED</bold></gradient>"
+      - "<rail>┃ <muted>Duration: <middle>Permanent"
+      - "<rail>┃ <muted>Reason: <middle><reason>"
+      - "<rail>┃ <muted>Punishment ID: <middle>#<punishmentID>"
+      - ""
+    cant-talk-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>YOU ARE MUTED</bold></gradient>"
+      - "<rail>┃ <muted>Duration: <middle>Permanent"
+      - "<rail>┃ <muted>Reason: <middle><reason>"
+      - "<rail>┃ <muted>Punishment ID: <middle>#<punishmentID>"
+      - ""
+  ipmute:
+    default-reason: "Spamming"
+    broadcast: "<silent><main>✗ <sender><middle> permanently ip-muted <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+    message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>YOU HAVE BEEN IP MUTED</bold></gradient>"
+      - "<rail>┃ <muted>Alt: <middle><alt>"
+      - "<rail>┃ <muted>Duration: <middle>Permanent"
+      - "<rail>┃ <muted>Reason: <middle><reason>"
+      - "<rail>┃ <muted>Punishment ID: <middle>#<punishmentID>"
+      - ""
+    cant-talk-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>YOU ARE IP MUTED</bold></gradient>"
+      - "<rail>┃ <muted>Alt: <middle><alt>"
+      - "<rail>┃ <muted>Duration: <middle>Permanent"
+      - "<rail>┃ <muted>Reason: <middle><reason>"
+      - "<rail>┃ <muted>Punishment ID: <middle>#<punishmentID>"
+      - ""
+  tempmute:
+    default-reason: "Spamming"
+    broadcast: "<silent><main>✗ <sender><middle> temporarily muted <target> for <secondary><duration><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+      - "<middle>Duration: <main><duration>"
+    message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>YOU HAVE BEEN MUTED</bold></gradient>"
+      - "<rail>┃ <muted>Duration: <middle><duration>"
+      - "<rail>┃ <muted>Reason: <middle><reason>"
+      - "<rail>┃ <muted>Punishment ID: <middle>#<punishmentID>"
+      - ""
+    cant-talk-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>YOU ARE MUTED</bold></gradient>"
+      - "<rail>┃ <muted>Duration: <middle><duration>"
+      - "<rail>┃ <muted>Reason: <middle><reason>"
+      - "<rail>┃ <muted>Punishment ID: <middle>#<punishmentID>"
+      - ""
+  tempipmute:
+    default-reason: "Spamming"
+    broadcast: "<silent><main>✗ <sender><middle> temporarily ip-muted <target> for <secondary><duration><middle>."
+    hover:
+      - " <secondary>● <middle>Reason: <main><reason> <muted>(<server>)"
+      - " <secondary>● <middle>Duration: <main><duration>"
+    message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>YOU HAVE BEEN IP MUTED</bold></gradient>"
+      - "<rail>┃ <muted>Alt: <middle><alt>"
+      - "<rail>┃ <muted>Duration: <middle><duration>"
+      - "<rail>┃ <muted>Reason: <middle><reason>"
+      - "<rail>┃ <muted>Punishment ID: <middle>#<punishmentID>"
+      - ""
+    cant-talk-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>YOU ARE IP MUTED</bold></gradient>"
+      - "<rail>┃ <muted>Alt: <middle><alt>"
+      - "<rail>┃ <muted>Duration: <middle><duration>"
+      - "<rail>┃ <muted>Reason: <middle><reason>"
+      - "<rail>┃ <muted>Punishment ID: <middle>#<punishmentID>"
+      - ""
+  unmute:
+    default-reason: "Pardoned"
+    broadcast: "<silent><#4ADE80>✓ <sender><middle> unmuted <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+  kick:
+    default-reason: "Misconduct"
+    broadcast: "<silent><main>✗ <sender><middle> kicked <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+    kick-message:
+      - ""
+      - "<gradient:#FF5F6D:#C81E4A><bold>KICKED</bold></gradient>"
+      - ""
+      - "<middle><reason>"
+      - ""
+  warn:
+    default-reason: "Misconduct"
+    broadcast: "<silent><main>✗ <sender><middle> warned <target><middle>."
+    hover:
+      - "<middle>Reason: <main><reason> <muted>(<server>)"
+    message:
+      - ""
+      - "<gradient:#FF3B6B:#E91E63><bold>YOU HAVE BEEN WARNED</bold></gradient>"
+      - "<rail>┃ <muted>Reason: <middle><reason>"
+      - "<rail>┃ <muted>Punishment ID: <middle>#<punishmentID>"
+      - ""
+
+punishment-ladder:
+  id-doesnt-exist: "<main>✗ <middle>A punishment with that doesn't exist."
+  created: "<middle>You have created a new <main><ladder> <middle>punishment ladder."
+  already-exists: "<main>✗ <middle>Ladder <bold><underlined><ladder></underlined></bold><middle> already exists."
+  deleted: "<middle>You have deleted <main><ladder> <middle>punishment ladder."
+  hidden-enabled: "<middle>You have made <main><ladder> <middle>punishment ladder invisible."
+  hidden-disabled: "<middle>You have made <main><ladder> <middle>punishment ladder visible."
+  priority-changed: "<middle>You have set <main><ladder> <middle>punishment ladder priority to <main><priority><middle>."
+  punishment-added:
+    - "<main><bold>Punishment Added </bold><muted>(<ladder>)"
+    - " <secondary>● <middle>Reason: <main><reason>"
+    - " <secondary>● <middle>Type: <main><type>"
+    - " <secondary>● <middle>Duration: <main><duration>"
+    - " <secondary>● <middle>Decay: <main><decay>"
+    - " <secondary>● <middle>IP Relative: <main><ip>"
+    - " <secondary>● <middle>Shadow: <main><shadow>"
+  punishment-edited:
+    - "<main><bold>Punishment Edited </bold><muted>(<ladder>)"
+    - " <secondary>● <middle>Reason: <main><reason>"
+    - " <secondary>● <middle>Type: <main><type>"
+    - " <secondary>● <middle>Duration: <main><duration>"
+    - " <secondary>● <middle>Decay: <main><decay>"
+    - " <secondary>● <middle>IP Relative: <main><ip>"
+    - " <secondary>● <middle>Shadow: <main><shadow>"
+  punishment-removed: "<main><type> <middle>has been removed from <main><ladder> <middle>punishment ladder."
+  list:
+    - ""
+    - "<middle><bold>Punishments List</bold>"
+    - "<list>"
+    - ""
+  format: " <secondary>● <middle>#<order> <main><type> <muted>(Reason: <reason> - Duration: <duration> - IP: <ip> - Shadow: <shadow> - Decay: <decay>)"
+
+disguise:
+  disguise-message: "<middle>You have disguised as <color><name><middle>."
+  redisguise-message: "<#4ADE80>Since you were disguised on a different server your disguise has been reapplied."
+  undisguise-message: "<#4ADE80>You have been undisguised."
+  failed: "<main>✗ <middle>There was an issue while trying to disguise. Contact an administrator."
+  already-disguised: "<main>✗ <middle>You are already disguised as <color><name><middle>."
+  already-disguised-other: "<main>✗ <middle>That player is already disguised as <color><name><middle>."
+  no-prev-disguise: "<main>✗ <middle>You have not previously disguised."
+  not-disguised: "<main>✗ <middle>You are not disguised."
+  disguised: "<main>✗ <middle><player> <middle>is disguised as <main><disguised><middle>."
+  force-undisguised: "<middle>You have undisguised <main><player><middle>."
+  valid: "<main>✗ <middle>You need to disguise as a valid name."
+  disguising-in-progress: "<#4ADE80>✓ <middle>Fetching requested skin, please wait."
+  not-allowed: "<main>✗ <middle>You cannot disguise with that name."
+  online-player-with-that-name: "<main>A player with that name is already online."
+  no-disguised-players: "<main>✗ <middle>There are no disguised players."
+  no-available-names: "<main>✗ <middle>There are no available disguise names."
+  list:
+    - "<muted>"
+    - "<main><bold>Disguised Players:</bold>"
+    - "<format>"
+    - "<muted>"
+  list-format: " <secondary>● <player> <middle>-> <disguise>"
+  choose-skin: "<#4ADE80>✓ <middle>Please type the name of the Skin you would like."
+
+alts:
+  none: "<main>None<muted>."
+  truncated: "<main>✗ <middle>Only showing you the first <amount> alts. For all of them use /altsmenu <player>."
+  format:
+    - "<muted>[<#4ADE80>Online<muted>, Offline, <bright><italic>Muted</italic><muted> (<bright><italic>Online</italic><muted>/<italic>Offline</italic><muted>), <main>Banned<muted>, <secondary>Blacklisted<muted>]"
+    - "<name><middle>'s Alts <muted>(<amount>):"
+    - "<alts>"
+  hover-format:
+    - "<middle>Name: <main><name>"
+    - "<middle>Last Seen: <main><lastSeen>"
+    - "<middle>Last Location: <main><country> <muted>(<isp>)"
+    - ""
+    - "<score>"
+    - "<matching>"
+    - "<punishments>"
+    - "<subnetMatch>"
+    - ""
+    - "<name><middle>'s Current IP Info:"
+    - " <secondary>● <middle>Logins: <main><logins>"
+    - " <secondary>● <middle>First Login: <main><firstLogin>"
+    - " <secondary>● <middle>Last Login: <main><lastLogin>"
+    - "<matchingIPInfo>"
+  matching-ip-info:
+    - ""
+    - "<name><middle>'s Matching IP Info <main>(<amount>)<middle>:"
+    - " <secondary>● <middle>Logins: <main><logins>"
+    - " <secondary>● <middle>First Login: <main><firstLogin>"
+    - " <secondary>● <middle>Last Login: <main><lastLogin>"
+  subnet-only-match:
+    - ""
+    - "<main>The IPs of this player do not match,"
+    - "<main>however the subnet does match!"
+  ip-matching: "<#4ADE80>✓ <middle>Currently matching <main><player>"
+  ip-not-matching: "<main>✗ <middle>Currently not matching <main><player>"
+  punishment-matching: "<#4ADE80>✓ <middle><type> currently matching <main><player>"
+  punishment-not-matching: "<main>✗ <middle><type> currently not matching <main><player>"
+
+  # Header above each confidence group in /alts. <tier> and <amount> placeholders.
+  group-header: "<tier> <muted>(<amount>):"
+
+  # Rendered where <score> appears. Placeholders: <score>, <tier>,
+  # <sharedAddresses>, <independentSubnets>, <lastSharedLogin>, <firstLinked>, <lastEvaluated>.
+  # Lines with <lastSharedLogin> are dropped when the pair never shared an address.
+  score-format:
+    - "<middle>Confidence: <main><score>% <muted>(<tier><muted>)"
+    - "<middle>Shared: <main><sharedAddresses> <muted>address(es) across <main><independentSubnets> <muted>subnet(s)"
+    - "<middle>Last shared login: <main><lastSharedLogin>"
+    - "<middle>First linked: <main><firstLinked> <muted>- last checked <main><lastEvaluated>"
+  no-score: "<middle>Confidence: <muted>not scored yet"
+
+  # Appended to the name where <sibling> appears when the link is trusted.
+  trusted-tag: " <muted>(Trusted)"
+
+  # Extra line under the score when the link is trusted.
+  trusted-line: "<muted>Pinned as trusted - never enforces."
+  disabled: "<main>✗ <middle>Alts are disabled on this server."
+  status:
+    blacklist:
+      name: "<secondary>Blacklist"
+      color: "<secondary>"
+    banned:
+      name: "<main>Banned"
+      color: "<main>"
+    muted-online:
+      name: "<bright><italic>Muted</italic>"
+      color: "<bright><italic></italic>"
+    muted-offline:
+      name: "<muted><italic>Muted</italic>"
+      color: "<muted><italic></italic>"
+    online:
+      name: "<#4ADE80>Online"
+      color: "<#4ADE80>"
+    offline:
+      name: "<muted>Offline"
+      color: "<muted>"
+
+  # Confidence tiers shown next to the score.
+  # CONFIRMED is 90+, LIKELY 75-89, POSSIBLE 50-74, WEAK below 50.
+  tier:
+    confirmed: "<main>✗ <middle>Confirmed"
+    likely: "<main>Likely"
+    possible: "<#FBBF24>⚑ <middle>Possible"
+    weak: "<muted>Weak"
+    trusted-group: "<#4ADE80>Trusted"
+    unscored: "<muted>Unscored"
+
+  # Output of /alts debug. <first>, <second>, <score>, <tier>, <display>, <link>,
+  # <alert> and <enforce> placeholders where they make sense.
+  debug:
+    header: "<muted><strikethrough>--------------------------------------------------</strikethrough>"
+    title: "<bright>Alt score: <first> <muted>vs <second>"
+    total: "<bright>Total: <#4ADE80><score>% <muted>(<tier><muted>)"
+    same-account: "<main>✗ <middle>That is the same account twice."
+    no-evidence: "<muted>No evidence of any kind connects these accounts."
+
+    # One line per signal. <signal>, <points> and <detail> placeholders.
+    signal: " <#FBBF24>● <bright><signal>: <#4ADE80><points> <muted>(<detail><muted>)"
+    thresholds: "<bright>Thresholds: <muted>display <bright><display> <muted>| link <bright><link> <muted>| alert <bright><alert> <muted>| enforce <bright><enforce>"
+    verdict-enforce: "<main>✗ <middle>Above enforce - ban evasion through this pair is punished automatically."
+    verdict-alert: "<#FBBF24>Alerts staff when one side evades a punishment, but never kicks automatically."
+    verdict-display: "<muted>Shown in /alts, nothing more."
+    verdict-none: "<muted>Below every threshold - these accounts are not linked."
+
+  # Output of /alts address. <player>, <accounts>, <classification>, <firstSeen>,
+  # <lastSeen>, <isp> and <sharedAt> placeholders where they make sense.
+  address:
+    no-address: "<main>✗ <middle><player> <middle>has no known address."
+    header: "<muted><strikethrough>--------------------------------------------------</strikethrough>"
+    title: "<bright>Address stats for <player><bright>'s current address:"
+    accounts: " <#FBBF24>● <bright>Accounts seen: <#4ADE80><accounts>"
+    classification: " <#FBBF24>● <bright>Classification: <#4ADE80><classification>"
+    first-seen: " <#FBBF24>● <bright>First seen: <#4ADE80><firstSeen>"
+    last-seen: " <#FBBF24>● <bright>Last seen: <#4ADE80><lastSeen>"
+    vpn-flag: " <#FBBF24>● <main>Known VPN exit"
+    mobile-flag: " <#FBBF24>● <#FBBF24>Mobile carrier network"
+    isp: " <#FBBF24>● <bright>ISP: <#4ADE80><isp>"
+    footnote: "<muted>The classification is worked out from how many accounts share this address."
+    forced-shared: "<#4ADE80>✓ <middle>Pinned as shared - accounts on it will barely count as alt evidence."
+    forced-trusted: "<#4ADE80>✓ <middle>Pinned as trusted - full evidence weight regardless of density."
+    cleared: "<#4ADE80>✓ <middle>Override cleared - the classification recomputes from density again."
+
+  # Shown to the punisher after banning someone with likely alt accounts.
+  ban-notice:
+    header: "<#FBBF24><player> <#FBBF24>has <amount> likely alt(s) - consider checking them:"
+    entry: " <#FBBF24>● <player> <muted>- <bright><score>% <muted>(<tier><muted>)"
+
+  # Output of /alts suppressed. <player> on the empty line,
+  # <name>, <score> and <tier> on each entry.
+  suppressed-list:
+    none: "<middle>Nothing is suppressed on <main><player><middle>."
+    entry: " <#FBBF24>● <name> <muted>- <bright><score>% <muted>(<tier><muted>)"
+
+  # Output of /alts trust, untrust and suppress. <first> and <second> placeholders.
+  trust:
+    trusted: "<#4ADE80>✓ <middle>The link between <first> <middle>and <second> <middle>is now trusted - it will never enforce, whatever it scores."
+    untrusted: "<#4ADE80>✓ <middle>The link between <first> <middle>and <second> <middle>is active again."
+    suppressed: "<#4ADE80>✓ <middle>The link between <first> <middle>and <second> <middle>is now suppressed - it is hidden and will never enforce. Use untrust to bring it back."
+
+# Output of /alts ips. <player>, <ip>, <name>, <lastSeen> placeholders
+search-ips:
+  no-ips: "<main>✗ <middle><player> <middle>has no known IPs."
+  header: "<muted><strikethrough>--------------------------------------------------</strikethrough>"
+  title: "<#4ADE80>IP history for <bright><player><#4ADE80>:"
+  ip-header: "<#FBBF24>[IP: <bright><ip><#FBBF24>]"
+  no-logins: "  <muted>No login records."
+  entry: "  <color><name> <muted>(last seen: <bright><lastSeen><muted>)"
+
+  # Color prefix applied to <color> when the entry is the search target
+  entry-color-target: "<#4ADE80>"
+
+  # Color prefix applied to <color> when the entry is anyone else
+  entry-color-other: "<bright>"
+  footer: "<muted><strikethrough>--------------------------------------------------</strikethrough>"
+
+  # DateFormat pattern for the <lastSeen> placeholder
+  date-format: "yyyy-MM-dd"
+
+grant:
+  # Sent to the player whose timed rank is nearly up, and once it is.
+  expiring: "<middle>Your <main><rank> <middle>rank runs out in <main><remaining><middle>."
+  expired: "<middle>Your <main><rank> <middle>rank has run out."
+  already-has-rank: "<main>✗ <middle><player><middle> already has that rank."
+  doesnt-have-rank: "<main>✗ <middle><player><middle> doesn't have that rank."
+  cant-grant-rank: "<main>✗ <middle>You can not grant this rank."
+  grant-remove-procedure-reason-ask: "<main>✗ <middle>Please type your custom removal reason in chat."
+  grant-remove-procedure-reason-set: "<middle>You have set the reason to <main><reason><middle>."
+  grant-procedure-rank-set: "<middle>You have set the grant rank to <main><rank><middle>."
+  grant-procedure-duration-ask: "<main>✗ <middle>Please type a custom duration for this grant in chat. Type <muted>perm <middle>for permanent duration."
+  grant-procedure-duration-set: "<middle>You have set the duration to <main><duration><middle>."
+  grant-procedure-scopes-set: "<middle>You have set the grant scopes to <main><scopes><middle>."
+  grant-procedure-reason-ask: "<middle>Please type a custom reason for this grant in chat."
+  grant-procedure-reason-set: "<middle>You have set the reason to <main><reason><middle>."
+  higher-priority: "<main>✗ <middle>You cannot grant <bright><player><middle> because their priority is higher."
+  granted-perm-self:
+    - "<middle>You have granted <main><user> <middle>the <main><rank> <middle>rank for <main><reason><middle>."
+    - ""
+    - "<main><bold>Grant Scopes</bold>"
+    - " <secondary>● <middle><scopes>"
+    - ""
+    - "<middle>This grant will <main>never <middle>expire."
+  granted-temp-self:
+    - "<middle>You have granted <main><user> <middle>the <main><rank> <middle>rank for <main><reason><middle>."
+    - ""
+    - "<main><bold>Grant Scopes</bold>"
+    - " <secondary>● <middle><scopes>"
+    - ""
+    - "<middle>This grant will expire in <main><expire><middle>."
+  granted-perm-target:
+    - ""
+    - "<middle>You have been granted the rank <rank><middle>."
+    - ""
+  granted-temp-target:
+    - ""
+    - "<middle>You have been granted the rank <rank> <middle>for <main><time><middle>."
+    - ""
+  grant-removed-self:
+    - ""
+    - "<middle>You have removed the <main><rank> <middle>grant from <main><player><middle>."
+    - ""
+  grant-removed-target:
+    - ""
+    - "<middle>Your <main><rank> <middle>grant has been removed."
+    - ""
+
+staff:
+  # Available Placeholders: <server> - Gets the servername, <serverDisplay> - Gets the server displayname
+  # <proxy> - Gets the proxy name, <proxyDisplay> - Gets the proxy display name
+  staff-connect: "<#7DD3FC>[S] <player> <middle>connected to <main><server> <middle>through <main><proxy><middle>."
+
+  # Available Placeholders: <server> - Gets the servername, <serverDisplay> - Gets the server displayname
+  # <from> - Gets the server name the player joined from, <fromDisplay> - Gets the server display name the player joined from
+  staff-switch: "<#7DD3FC>[S] <player> <middle>joined <main><server> <middle>from <main><from><middle>."
+
+  # Available Placeholders: <server> - Gets the servername, <serverDisplay> - Gets the server displayname
+  staff-disconnect: "<#7DD3FC>[S] <player> <middle>disconnected from <main><server><middle>."
+  punishment-evading-alert: "<#7DD3FC>[S] <#7DD3FC><player> <main>is punishment evading! <muted>(<#7DD3FC>Alts<muted>: <#7DD3FC><alts><muted>)"
+  rank-disguise-alert: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>rank disguised <target> <middle>as <rank><middle>."
+  rank-undisguise-alert: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>rank undisguised <target><middle>."
+  disguise-alert: "<#7DD3FC>[S] <muted>[<server>] <realName> <middle>disguised as <disguiseName><middle>."
+  redisguise-alert: "<#7DD3FC>[S] <muted>[<server>] <realName> <middle>redisguised as <disguiseName><middle>."
+  undisguise-alert: "<#7DD3FC>[S] <muted>[<server>] <realName> <middle>undisguised from <disguiseName><middle>."
+  clear-chat-alert: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>has cleared the chat."
+  mute-chat-alert: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>has muted the chat."
+  unmute-chat-alert: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>has unmuted the chat."
+  slow-chat-alert: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>has slowed the chat to <main><seconds>s<middle>."
+  freeze-alert: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>froze <target><middle>."
+  unfreeze-alert: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>unfroze <target><middle>."
+  left-while-frozen-alert: "<#7DD3FC>[S] <muted>[<server>] <main><name> <middle>left whilst frozen."
+  watchlist-alert: "<#7DD3FC>[S] <main><player> <middle>has reached <main><reports> <middle>reports and is on the watchlist."
+  panic-alert: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>has panicked<middle>!"
+  unpanic-alert: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>has been unpanicked by <sender><middle>."
+  report-alert: "<#7DD3FC>[Report] <muted>[<player_server>] <main><player> <middle>reported <main><target><disguised><muted> [<main><reportCount><muted>] <middle>for <middle><reason><middle>."
+  request-alert: "<#7DD3FC>[Request] <muted>[<player_server>] <player><disguised> <middle>requested staff help for <main><reason><middle>."
+
+  # Appended to the report and request alerts when the player is disguised.
+  disguised-suffix: " <muted>(Disguised)"
+  server-started: "<#7DD3FC>[A] <main><server> <muted>(<region>) <middle>has started in <main><time><middle>."
+  server-stopped: "<#7DD3FC>[A] <main><server> <muted>(<region>) <middle>has stopped."
+  am-i-vanished-true: "<#4ADE80>✓ <middle>You are currently vanished."
+  am-i-vanished-false: "<main>✗ <middle>You are not currently vanished."
+
+  # Using &h in the message removes the prefix and just sends the message.
+  alert: "<main><bold>Alert </bold><secondary>● <bright><message>"
+  social-spy-alert: "<#7DD3FC>[A] <muted>[<server>] <sender> <muted>-> <middle><target><muted>: <bright><message>"
+  admin-alert: "<#7DD3FC>[A] <main><player><muted>: <action>"
+  admin-prefix: "<main><bold>⚑ </bold>"
+  admin-hover: "<#4ADE80>» <middle>Click to open this users admin profile."
+  admin-command: "/adminprofile <player>"
+  delete-message-enabled: true
+  delete-message-prefix: "<#7DD3FC>[X] "
+  delete-message-hover: "<main>» <middle>Click to delete this message from the chat."
+  user-info:
+    - "<main><bold>Profile Information</bold>"
+    - " <secondary>● <middle>Target: <main><player>"
+    - " <secondary>● <middle>UUID: <main><uuid>"
+    - " <secondary>● <middle>Previous Names: <main><nameHistory>"
+    - " <secondary>● <middle>Permissions: <main><permissions>"
+    - ""
+    - " <secondary>● <middle>Current Rank: <main><rank>"
+    - " <secondary>● <middle>Active Grants: <main><activeGrants>"
+    - " <secondary>● <middle>Punishments: <main><activePunishments> <muted>/ <main><totalPunishments>"
+    - ""
+    - " <secondary>● <middle>Logins: <main><logins>"
+    - " <secondary>● <middle>First Login: <main><firstLogin>"
+    - " <secondary>● <middle>Last Login: <main><lastLogin> <muted>[<lastSeen>]"
+    - " <secondary>● <middle>Connected To: <main><server>"
+  user-staff-info:
+    - "<player><main><bold>'s Profile Information</bold>"
+    - " <secondary>● <middle>UUID: <main><uuid>"
+    - " <secondary>● <middle>Rank: <main><rank>"
+    - ""
+    - "<main><bold>Logins</bold>"
+    - " <secondary>● <middle>Logins: <main><logins>"
+    - " <secondary>● <middle>First Login: <main><firstLogin>"
+    - " <secondary>● <middle>Last Login: <main><lastLogin> <muted>[<lastSeen>]"
+    - " <secondary>● <middle>Daily Logins: <main><dailyAverage>"
+    - " <secondary>● <middle>Average Time Logged In: <main><timeAverage>"
+    - ""
+    - "<main><bold>Punishments </bold><muted>[Executed/Removed]"
+    - " <secondary>● <middle>Total: <main><executed>/<removed>"
+    - " <secondary>● <middle>Mutes: <main><mutes>/<mutesRemoved>"
+    - " <secondary>● <middle>Bans: <main><bans>/<bansRemoved>"
+    - " <secondary>● <middle>Blacklists: <main><blacklists>/<blacklistsRemoved>"
+  deleted: "<secondary>You have deleted <target><secondary>'s profile."
+  delete-cancelled: "<main>✗ <middle>Cancelled deletion of <player><middle>."
+
+  # What /user gdpr export says once it has the data together.
+  export-pasted: "<secondary>Link to data export: <link>"
+  export-password: "<secondary>Password: <password>"
+  export-written: "<secondary>Wrote the data export to <main><path><secondary>."
+  export-failed: "<main>✗ <middle>Could not write the data export. Check console."
+  rollback:
+    wiping: "<middle>Wiping all <main><type><middle>, please wait..."
+    wiped: "<middle>Successfully wiped <main><amount> <type> <middle>by <main><name><bright>. <muted>(<#4ADE80><active> Active<muted>, <main><inactive> Inactive<muted>)"
+    no-history: "<main>✗ <middle>That player doesn't have <secondary><type> <middle>performed."
+  warns:
+    format: "<active> <middle>#<id>: <main><reason> <muted>[<date> - Expire: <expire><muted>]"
+    active: "<#4ADE80>✓ <middle>(Active)"
+    inactive: "<main>✗ <middle>(Inactive)"
+    remove-text: " <main><bold>[✘]</bold>"
+    remove-hover: "<main>» <middle>Click to remove the <bright>#<id> <middle>warning."
+  admin-alerts:
+    blocked-command: "tried to execute a blocked command: <main><command>"
+    self-vanish-on: "<middle>enabled vanish"
+    self-vanish-off: "<middle>disabled vanish"
+    vanish-other-on: "<middle>enabled vanish for <target>"
+    vanish-other-off: "<middle>disabled vanish for <target>"
+    self-mod-on: "<middle>enabled mod mode"
+    self-mod-off: "<middle>disabled mod mode"
+    mod-other-on: "<middle>enabled mod mode for <target>"
+    mod-other-off: "<middle>disabled mod mode for <target>"
+
+vanish:
+  enabled: "<#4ADE80>✓ <middle>You've enabled vanish."
+  disabled: "<main>✗ <middle>You've disabled vanish."
+  enabled-other: "<#4ADE80>✓ <middle>You've enabled vanish for <player><middle>."
+  disabled-other: "<main>✗ <middle>You've disabled vanish for <player><middle>."
+  automatic: "<#FBBF24>⚑ <middle><bold>You've automatically been put into vanish.</bold>"
+  must-unvanish: "<main>✗ <middle>You can't go out of modmode while being vanished."
+  hide-staff: "<#4ADE80>✓ <middle>You've hidden staff."
+  show-staff: "<main>✗ <middle>You've shown staff."
+  silent-chest: "<muted>Opening a chest silently..."
+  silent-container: "<muted>Opening container silently..."
+  silent-ender-chest: "<main>✗ <middle>You're vanished and cannot open this container."
+
+modmode:
+  cant-break-blocks: "<main>✗ <middle>You can't break blocks while in modmode."
+  cant-place-blocks: "<main>✗ <middle>You can't place blocks while in modmode."
+  enabled: "<#4ADE80>✓ <middle>You've enabled modmode."
+  disabled: "<main>✗ <middle>You've disabled modmode."
+  enabled-other: "<#4ADE80>✓ <middle>You've enabled modmode for <player><middle>."
+  disabled-other: "<main>✗ <middle>You've disabled modmode for <player><middle>."
+  cant-hit-entities: "<main>✗ <middle>You can't hit entities while in modmode."
+
+freeze:
+  location-set: "<#4ADE80>✓ <middle>Successfully set the freeze location to your current location."
+
+  # Tells the staff member which snapshot was taken when they froze someone.
+  snapshot-taken: "<muted>Chat snapshot <main><id> <muted>taken of <target><muted>."
+  frozen: "<#4ADE80>✓ <middle>You have been frozen."
+  unfrozen: "<#4ADE80>✓ <middle>You have been unfrozen."
+  froze: "<#4ADE80>✓ <middle>You have frozen <target><middle>."
+  unfroze: "<#4ADE80>✓ <middle>You have unfrozen <target><middle>."
+  higher-rank: "<main>✗ <middle>You can not freeze this user since they have a higher rank than you."
+  cant-hit-entities: "<main>✗ <middle>You cannot hit this player as they're currently frozen."
+
+  # Prefixed to anything a frozen player says.
+  prefix: "<secondary>[Frozen] "
+
+  # Repeated to the frozen player, the interval lives in settings.yml.
+  message:
+    - "<main>You have been frozen by a staff member."
+    - "<middle>Please join our Discord: <main>discord.yourserver.com"
+    - "<middle>You have <main>5 <middle>minutes. Logging out will result in a ban!"
+
+  # Shown to staff when a frozen player logs out, if left-frozen-click is on.
+  ban-button:
+    text: "<main>(<main>Ban<main>)"
+    hover: "<main>» <middle>Click to ban <name> <middle>for Logged out whilst frozen"
+    command: "/ban <name> Logged out whilst frozen -s"
+
+panic:
+  panicked: "<#4ADE80>✓ <middle>You have been put into panic mode."
+  unpanicked: "<#4ADE80>✓ <middle>You are no longer in panic mode."
+  unpanic-other: "<#4ADE80>✓ <middle>You have unpanicked <target><middle>."
+  already-panic: "<main>✗ <middle>You are already in panic mode!"
+  not-in-panic: "<main>✗ <middle><target><middle> is not in panic!"
+  cant-hit-entities: "<main>✗ <middle>You cannot hit this player as they're currently in panic."
+
+  # Repeated to the panicked player, the interval lives in settings.yml.
+  message:
+    - "<main>You are in panic mode."
+    - "<middle>Please join our Discord: <main>discord.yourserver.com"
+    - "<middle>Message a staff member so they can unpanic you!"
+
+report:
+  sent: "<#4ADE80>✓ <middle>Your report has been sent to all staff."
+
+  # What a player is asked when they report for a reason of their own.
+  custom-prompt: "<#4ADE80>✓ <middle>Type what you are reporting <target><middle> for, or 'cancel' to stop."
+  custom-disabled: "<main>✗ <middle>Reports need one of the reasons on the list."
+  custom-missing-category: "<main>✗ <middle>Custom reasons are misconfigured, tell an administrator."
+  cant-report-self: "<main>✗ <middle>You're are not allowed to report yourself."
+  cant-report-staff: "<main>✗ <middle>You're are not allowed to report staff members."
+  muted: "<main>✗ <middle>You are currently report muted! Create a ticket on discord.server.rip for more information."
+  reward: "<#4ADE80>✓ <middle>You recent report has been reviewed and handled. Thank you! :)"
+
+  # Sent to whoever filed the report once staff are done with it, however it ended.
+  reviewed: "<#4ADE80>✓ <middle>Your report on <target><middle> has been reviewed. Thank you!"
+
+  # Shown when the report category's ladder has no punishment left to give.
+  no-ladder: "<main>✗ <middle>There are no available ladders for this punishment ladder."
+
+  # How the report queue has been going, shown by /reports stats.
+  # Placeholders: <days>, <total>, <open>, <inProgress>, <resolved>, <punished>,
+  # <outstanding>, <response>, <resolution>, <handled>
+  statistics:
+    - "<muted><strikethrough>----------------------------------------</strikethrough>"
+    - "<main><bold>Reports </bold><muted>- <middle>the last <main><days> <middle>days"
+    - ""
+    - " <secondary>● <middle>Filed: <main><total> <muted>(<outstanding> still waiting)"
+    - " <secondary>● <middle>Open: <main><open> <middle>| In progress: <main><inProgress>"
+    - " <secondary>● <middle>Resolved: <main><resolved> <middle>| Punished: <main><punished>"
+    - ""
+    - " <secondary>● <middle>Picked up after: <main><response>"
+    - " <secondary>● <middle>Closed after: <main><resolution>"
+    - ""
+    - "<main><bold>Handled by</bold>"
+    - "<handled>"
+    - "<muted><strikethrough>----------------------------------------</strikethrough>"
+
+  # One line of the leaderboard, repeated under <handled>.
+  statistics-handled: " <secondary>● <main><player><muted>: <middle><amount>"
+
+  # Shown in place of a time nobody has produced yet.
+  statistics-never: "<muted>n/a"
+
+  # Shown in place of the leaderboard when nobody has closed a report yet.
+  statistics-nobody: " <secondary>● <middle>Nobody yet."
+
+  # Kick screen of the automatic mute a pile of chat reports triggers.
+  pending-review-mute:
+    - "<secondary><strikethrough>--------------------------------------------------</strikethrough>"
+    - "<main>A report against you is currently under review."
+    - "<muted>Your mute will expire in <bright><duration><muted>."
+    - ""
+    - "<muted>Find out more here: <#7DD3FC><underlined>www.yourserver.net/mutes</underlined>"
+    - "<muted>Mute ID: <bright><punishmentID>"
+    - "<secondary><strikethrough>--------------------------------------------------</strikethrough>"
+  category:
+    doesnt-exist: "<main>✗ <middle>The report category <#FBBF24><category><middle> doesn't exist."
+    already-exists: "<main>✗ <middle>A report category with that id already exists."
+    created: "<#4ADE80>✓ <middle>You have created the <bright><category><middle> report category."
+    deleted: "<#4ADE80>✓ <middle>You have deleted the <bright><category><middle> report category."
+    updated: "<#4ADE80>✓ <middle>You have updated the <bright><type><middle> of the report category <bright><category><middle>."
+
+    # Shown by /reports categories.
+    list:
+      - ""
+      - "<main>Report Categories <secondary>(<amount>)"
+      - "<categories>"
+      - "<middle>Create and edit them with <main>/adminreport<middle>."
+      - ""
+    list-entry: " <rail>┃ <main><category> <middle>- <secondary><display> <middle>(ladder: <secondary><ladder><middle>)"
+    list-empty: "<middle>No report categories exist yet. Create one with <main>/adminreport create<middle>."
+
+request:
+  sent: "<#4ADE80>✓ <middle>Your request has been sent to all staff."
+  muted: "<main>✗ <middle>You are currently request muted! Create a ticket on discord.server.rip for more information."
+  mute: "<#FBBF24>⚑ <middle>You have been request muted. You can no longer use /report or /request."
+  unmute: "<#FBBF24>⚑ <middle>You have been request unmuted. You can now use /report and /request again."
+  mute-sender: "<#4ADE80>✓ <middle>You have request muted <#FBBF24><player><#FBBF24>."
+  unmute-sender: "<#4ADE80>✓ <middle>You have request unmuted <#FBBF24><player><#FBBF24>."
+
+# Chat control, /clearchat, /mutechat and /slowchat.
+chat:
+  cleared: "<#4ADE80>✓ <middle>The chat was cleared by <player><middle>."
+  muted: "<main>✗ <middle>The chat has been muted by <player><middle>."
+  unmuted: "<#4ADE80>✓ <middle>The chat has been unmuted by <player><middle>."
+  slowed: "<#4ADE80>✓ <middle>The chat has been slowed by <player><middle>."
+  currently-muted: "<main>✗ <middle>The chat is currently muted."
+  currently-slowed: "<main>✗ <middle>The chat is currently slowed. Wait another <seconds> seconds."
+
+whitelist:
+  need-access-type: "<main>✗ <middle>You must have at least one access type enabled."
+  rank-kick-message:
+    - ""
+    - "<main>The network is currently whitelisted"
+    - "<main>Additional info may be found on our discord."
+    - ""
+    - "<main>The server is for <rank><main> rank and higher only."
+  uuid-kick-message:
+    - ""
+    - "<main>The network is currently whitelisted"
+    - "<main>Additional info may be found on our discord."
+  enabled: "<#4ADE80>✓ <middle>You have enabled the whitelist."
+  disabled: "<main>✗ <middle>You have disabled the whitelist."
+  access-rank: "<middle>Updated whitelist access rank to <main><rank><middle>."
+  access-type-on: "<middle>Enabled <main><type> <middle>access type."
+  access-type-off: "<middle>Disabled <main><type> <middle>access type."
+  already-added: "<main>✗ <middle>Player <main><player> <middle>is already added to the whitelist."
+  not-added: "<main>✗ <middle>Player <main><player> <middle>is not added to the whitelist."
+  doesnt-exist: "<main>✗ <middle>Player <main><player> <middle>does not exist."
+  added-perm: "<middle>Added <main><player> <middle>to the whitelist."
+  added-temp: "<middle>Temporarily added <main><player> <middle>to the whitelist."
+  removed: "<middle>Removed <main><player> <middle>from the whitelist."
+  status:
+    - "<main><bold>Whitelist Status</bold>"
+    - " <secondary>● <middle>Enabled: <enabled>"
+    - " <secondary>● <middle>Access Types: <main><accessTypes>"
+    - " <secondary>● <middle>Access Rank: <main><rank>"
+    - " <secondary>● <middle>Whitelisted Users: <main><players>"
+  player-format: "<main><player>"
+  player-temporary-format: "<main><player> <secondary>(Temp)"
+
+filter:
+  already-exists: "<main>✗ <middle>A filter with that name already exists."
+  wouldve-been-filtered: "<main>✗ <middle>This would have been filtered."
+  contains-blocked-words: "<main>✗ <middle>Your message contains blocked word(s) and can not be sent!"
+  staff-alert: "<#7DD3FC>[FILTER] <muted>[<server>] <main><player><muted>: <bright><message>"
+  staff-alert-severe: "<#7DD3FC>[FILTER] <#FBBF24>⚑ <muted>[<server>] <main><player><muted>: <main><message>"
+  staff-alert-private: "<#7DD3FC>[FILTER] <muted>[<server>] <main><sender> <muted>-> <main><target><muted>: <bright><message>"
+  staff-alert-private-severe: "<#7DD3FC>[FILTER] <#FBBF24>⚑ <muted>[<server>] <main><sender> <muted>-> <main><target><muted>: <main><message>"
+  create: "<middle>A <main><type> <middle>filter with the pattern <main><filter> <middle>has been created."
+  deleted: "<middle>The <main><filter> <middle>filter has been deleted."
+  hard-on: "<middle>The filter <main><filter> <middle>has been set to hard."
+  hard-off: "<middle>The filter <main><filter> <middle>has been set to soft."
+  is-not-filtered: "<main>✗ <middle>This word isn't filtered."
+  filter-test:
+    - ""
+    - "<main>Filter Detected"
+    - " <secondary>● <middle>Name: <main><name>"
+    - " <secondary>● <middle>Filter: <main><filter>"
+    - " <secondary>● <middle>Type: <main><type>"
+    - ""
+  format: " <secondary>● <middle><name> <muted>(Type: <type>, Filter: <filter>)"
+
+playtime:
+  playtime-self:
+    - ""
+    - "<main>Your Playtime Statistics"
+    - " <secondary>● <middle>Total Playtime: <main><playtime>"
+    - " <secondary>● <middle>Logins: <main><logins>"
+    - ""
+  playtime-other:
+    - ""
+    - "<player><main>'s Playtime Statistics"
+    - " <secondary>● <middle>Total Playtime: <main><playtime>"
+    - " <secondary>● <middle>Logins: <main><logins>"
+    - ""
+
+staff-activity:
+  format:
+    - ""
+    - "<player><main>'s Staff Activity"
+    - " <secondary>● <middle>Playtime: <main><playtime>"
+    - " <secondary>● <middle>AFK Time: <main><afk>"
+    - " <secondary>● <middle>Punishments Issued: <main><punishments>"
+    - " <secondary>● <middle>Voided In Error: <main><voided> <secondary>(<voidrate>)"
+    - " <secondary>● <middle>Bans: <main><bans> <middle>Mutes: <main><mutes> <middle>Kicks: <main><kicks> <middle>Warns: <main><warns>"
+    - " <secondary>● <middle>Punishments Removed: <main><removed>"
+    - " <secondary>● <middle>Reports Handled: <main><reportshandled> <secondary>(avg <reportspeed>)"
+    - " <secondary>● <middle>Server Switches: <main><switches>"
+    - " <secondary>● <middle>Most Active Server: <main><activeserver>"
+    - " <secondary>● <middle>Peak Online Hour: <main><peakonline>"
+    - " <secondary>● <middle>Total Logins: <main><logins>"
+    - " <secondary>● <middle>Last Login: <main><lastlogin>"
+    - " <secondary>● <middle>Last Leave: <main><lastleave>"
+    - ""
+
+notifications:
+  unread-notifications: "<middle>You have <main><size> <middle>unread notifications."
+  already-exists: "<main>✗ <middle>A notification called <bright><notification><middle> already exists."
+  created: "<middle>You have created the <main><notification> <middle>notification."
+  deleted: "<middle>You have deleted the <main><notification> <middle>notification."
+  title-updated: "<middle>You have updated the title of <main><notification> <middle>to <main><title><middle>."
+
+cooldowns:
+  command-cooldown: "<main>✗ <middle>You are on a command cooldown for <bright><remaining><middle>."
+  disguise-cooldown: "<main>✗ <middle>You are on a disguise cooldown for <bright><remaining><middle>."
+  redisguise-cooldown: "<main>✗ <middle>You are on a disguise cooldown for <bright><remaining><middle>."
+  snapshot-cooldown: "<main>✗ <middle>You are on a chat snapshot cooldown for <bright><remaining><middle>."
+  spawn-cooldown: "<main>✗ <middle>You are on a spawn cooldown for <bright><remaining><middle>."
+  report-cooldown: "<main>✗ <middle>You're on a report cooldown for another <remaining><middle>."
+  request-cooldown: "<main>✗ <middle>You're on a request cooldown for another <remaining><middle>."
+
+basic:
+  general:
+    invalid-item: "<main>This item is invalid."
+    invalid-enchant: "<main>✗ <middle>This enchant is invalid."
+    full-inventory: "<main>✗ <middle>Your inventory is full."
+    ping-self: "<#FBBF24>⚑ <middle>Your Ping: <main><ping>ms"
+    ping-other: "<main><player><#FBBF24>'s Ping: <main><ping>ms"
+    ender-chest-other: "<middle>You have opened <main><player><middle>'s ender chest."
+    welcome-message:
+      - "<muted><strikethrough>-----------------------------------</strikethrough>"
+      - ""
+      - "<middle>Welcome to <main><bold><server></bold>"
+      - ""
+      - " <secondary>● <middle>Discord: <main><discord>"
+      - " <secondary>● <middle>Website: <main><website>"
+      - " <secondary>● <middle>Store: <main><store>"
+      - ""
+      - "<muted><strikethrough>-----------------------------------</strikethrough>"
+    help:
+      - "<muted><strikethrough>-----------------------------------</strikethrough>"
+      - "<main><bold>Help </bold><muted>- <middle>Useful information"
+      - "<muted><strikethrough>-----------------------------------</strikethrough>"
+      - " <secondary>● <main>/report (player) <muted>» <middle>Report a player."
+      - " <secondary>● <main>/request (message) <muted>» <middle>Request help."
+      - ""
+      - "<main><bold>Social Media</bold>"
+      - " <secondary>● <main>Discord <muted>» <middle><discord>"
+      - " <secondary>● <main>Website <muted>» <middle><website>"
+      - " <secondary>● <main>Store <muted>» <middle><store>"
+      - "<muted><strikethrough>-----------------------------------</strikethrough>"
+    staff-help:
+      - "<muted><strikethrough>-----------------------------------</strikethrough>"
+      - "<main><bold>Staff Help </bold><muted>- <middle>Useful commands."
+      - "<muted><strikethrough>-----------------------------------</strikethrough>"
+      - " <secondary>● <main>/c (player) <muted>» <middle>View player's history."
+      - " <secondary>● <main>/b (player) (reason) [-s] <muted>» <middle>Ban a player."
+      - " <secondary>● <main>/tb (player) (reason) [-s] <muted>» <middle>Temp-ban a player."
+      - " <secondary>● <main>/ub (player) (reason) [-s] <muted>» <middle>Unban a player."
+      - " <secondary>● <main>/mute (player) (reason) [-s] <muted>» <middle>Mute a player."
+      - " <secondary>● <main>/tm (player) (reason) [-s] <muted>» <middle>Temp-mute a player."
+      - " <secondary>● <main>/um (player) (reason) [-s] <muted>» <middle>Unmute a player."
+      - " <secondary>● <main>/shadowmute (player) (reason) [-s] <muted>» <middle>Shadow-mute a player."
+      - " <secondary>● <main>/stm (player) (reason) [-s] <muted>» <middle>Shadow-temp-mute a player."
+      - "<muted><strikethrough>-----------------------------------</strikethrough>"
+    admin-help:
+      - "<muted><strikethrough>-----------------------------------</strikethrough>"
+      - "<main><bold>Admin Help </bold><muted>- <middle>Useful commands."
+      - "<muted><strikethrough>-----------------------------------</strikethrough>"
+      - " <secondary>● <main>/grant (player) <muted>» <middle>Grant a player."
+      - " <secondary>● <main>/grants (player) <muted>» <middle>View player's grants."
+      - " <secondary>● <main>/user info (player) <muted>» <middle>View player's info."
+      - " <secondary>● <main>/staffhistory (player) <muted>» <middle>View player's staff history."
+      - " <secondary>● <main>/granthistory (player) <muted>» <middle>View player's grant history."
+      - "<muted><strikethrough>-----------------------------------</strikethrough>"
+  social:
+    store: "<main><bold>Store </bold><muted>» <middle><store>"
+    teamspeak: "<main><bold>TeamSpeak </bold><muted>» <middle><teamspeak>"
+    discord: "<main><bold>Discord </bold><muted>» <middle><discord>"
+    twitter: "<main><bold>Twitter </bold><muted>» <middle><twitter>"
+    website: "<main><bold>Website </bold><muted>» <middle><website>"
+  admin:
+    broadcast: "<gradient:#FF3B6B:#E91E63><bold>BROADCAST</bold></gradient> <rail>» <middle><message>"
+    staff-alert: "<gradient:#FF5F6D:#C81E4A><bold>STAFF ALERT</bold></gradient> <rail>» <middle><message>"
+    staff-broadcast: "<gradient:#7DD3FC:#38BDF8><bold>STAFF</bold></gradient> <rail>» <middle><message>"
+    admin-alerts:
+      teleported-to: "<middle>teleported to <target>"
+      teleport-here: "<middle>teleported <target> <middle>to himself"
+      teleported-everyone-to-himself: "<middle>teleported everyone to himself"
+      healed-someone: "<middle>healed <target>"
+      self-heal: "<middle>healed himself"
+      fed-someone: "<middle>fed <target>"
+      self-fed: "<middle>fed himself"
+      flight-other-on: "<middle>enabled flight mode for <target>"
+      self-flight-on: "<middle>enabled flight mode"
+      flight-other-off: "<middle>disabled flight mode for <target>"
+      self-flight-off: "<middle>disabled flight mode"
+      god-mode-on: "<middle>enabled god"
+      god-mode-off: "<middle>disabled god"
+      kill-other: "<bright>killed <target><bright>."
+    fly:
+      enabled: "<#4ADE80>✓ <middle>You have enabled fly mode."
+      disabled: "<main>✗ <middle>You have disabled fly mode."
+      other-on: "<#4ADE80>✓ <middle>You have enabled fly mode for <bright><player><middle>."
+      other-off: "<main>✗ <middle>You have disabled fly mode for <bright><player><middle>."
+      r-other-on: "<#4ADE80>✓ <middle>Your fly mode has been enabled by <bright><player><middle>."
+      r-other-off: "<main>✗ <middle>Your fly mode has been disabled by <bright><player><middle>."
+    teleport:
+      tp: "<middle>You have teleported to <main><player><middle>."
+      pitch-required: "<main>✗ <middle>Pitch must be specified."
+      here: "<middle>You have teleported <main><target> <middle>to you."
+      r-here: "<middle>You have been teleported to <main><player><middle>'s position."
+      all: "<middle>You have teleported all players to your location."
+      position: "<middle>You have teleported to <main><x><middle>, <main><y><middle>, <main><z> <middle>location."
+      position-with-yaw-pitch: "<middle>You have teleported to <main><x><middle>, <main><y><middle>, <main><z><middle>, <main><yaw><middle>, <main><pitch> <middle>location."
+      already-at-top: "<main>✗ <middle>You're already at the top."
+      already-in-world: "<main>✗ <middle>You're already in this world."
+      top: "<middle>You have been teleported at top."
+      world: "<middle>You have been teleported to <main><world> <middle>world."
+    item:
+      lore-added: "<middle>You have added lore <muted>(<lore><muted>) <middle>to the item you're holding."
+      lore-remove: "<middle>You have removed lore <muted>(<id><muted>) <middle>from the item you're holding."
+      lore-remove-failed: "<main>✗ <middle>Failed to remove this lore."
+      can-not-rename: "<main>✗ <middle>You can't rename this item."
+      rename: "<middle>You have renamed the item you're holding to <main><name><middle>."
+      enchanted: "<middle>Successfully enchanted your item with <main><enchant><middle>."
+      gave: "<middle>Successfully gave you <#FBBF24>x<amount> <material><middle>."
+      gave-other: "<middle>Successfully gave <main><player> <#FBBF24>x<amount> <material><middle>."
+    repair:
+      already: "<main>✗ <middle>This item is already repaired."
+      success-item: "<middle>You have repaired the item you are holding."
+      success-armor: "<middle>You have repaired your armor."
+      success-all: "<middle>You have repaired armor & items."
+    gamemode:
+      no-permission: "<main>✗ <middle>You are not allowed to use this gamemode."
+      invalid: "<main>✗ <middle>That game mode is invalid."
+      updated: "<middle>You have updated your game mode to <main><gamemode><middle>."
+      other: "<middle>You have updated <main><player><middle>'s game mode to <main><gamemode><middle>."
+      r-other: "<middle>Your game mode has been updated to <main><gamemode> <middle>by <main><player><middle>."
+    heal:
+      self: "<#4ADE80>✓ <middle>You have been healed!"
+      other: "<middle>You have healed <main><player><middle>."
+      r-other: "<#4ADE80>✓ <middle>You have been healed by <bright><player><middle>."
+    more:
+      success: "<#4ADE80>✓ <middle>The item you are holding has been multiplied by 64 times."
+    skull:
+      success: "<middle>You have received <main><name><middle>'s skull."
+    god:
+      enabled: "<#4ADE80>✓ <middle>You have enabled god mode."
+      disabled: "<main>✗ <middle>You have disabled god mode."
+    speed:
+      walk-or-fly: "<main>✗ <middle>Please use <secondary><bold>WALK </bold><middle>or <secondary><bold>FLY</bold><middle>."
+      limit: "<main>✗ <middle>There is a limit between <secondary><bold><min> </bold><middle>- <secondary><bold><max></bold><middle>."
+      fly: "<middle>Fly speed has been updated to <main><value><middle>."
+      fly-other: "<middle>Updated <main><player><middle>'s fly speed to <main><value><middle>."
+      walk: "<middle>Walk speed has been updated to <main><value><middle>."
+      walk-other: "<middle>Updated <main><player><middle>'s walk speed to <main><value><middle>."
+    feed:
+      self: "<middle>You have been fed."
+      other: "<middle>You have fed <main><player><middle>."
+      r-other: "<middle>You have been fed by <main><player><middle>."
+    build:
+      disabled-in-config: "<main>✗ <middle>Build mode is disabled in the config."
+      enabled: "<#4ADE80>✓ <middle>You have enabled build mode."
+      disabled: "<main>✗ <middle>You have disabled build mode."
+      enabled-other: "<#4ADE80>✓ <middle>You have enabled build mode for <player><middle>."
+      disabled-other: "<main>✗ <middle>You have disabled build mode for <player><middle>."
+    clear:
+      self: "<middle>You have cleared your inventory. <muted>(<total> items in total)"
+      other: "<middle>You have cleared <main><player><middle>'s inventory. <muted>(<total> items in total)"
+      r-other: "<middle>Your inventory has been cleared by <main><player><middle>. <muted>(<total> items in total)"
+    sudo:
+      higher-priority: "<main>✗ <middle>You can not sudo <bright><player><middle> because their priority is higher."
+      sudo: "<middle>You have made <main><player> <middle>type <main><chat><middle>."
+      all: "<middle>You have made all players type <main><chat><middle>."
+      no-commands: "<main>✗ <middle>You can not force commands through sudo."
+    kill:
+      player-kill: "<middle>You have killed <main><player><middle>."
+      kill-response: "<middle>You have been killed by <main><player><middle>."
+
+staff-protection:
+  alert: "<#7DD3FC><bold>[Security] </bold><bright><staff> <muted>issued <bright><count> <muted>punishments within <bright><window>s<muted>."
+  panic-alert: "<#7DD3FC><bold>[Security] </bold><bright><staff> <muted>pulled the panic alarm, their account may be compromised."
+
+tags:
+  exported: "<#4ADE80>✓ <middle>All tags have been exported to <#FBBF24>tags.json<middle>."
+  imported: "<#4ADE80>✓ <middle>All tags have been successfully imported."
+  file-missing: "<main>✗ <middle>A <#FBBF24>tags.json<middle> file is not present."
+  deleted: "<middle>You have deleted <main><tag> <middle>tag."
+  created: "<middle>You have created <main><tag> <middle>tag."
+  already-exists: "<main>✗ <middle>Tag <bright><tag> <middle>already exists."
+  priority-updated: "<middle>You have updated price of <main><tag> <middle>tag to <main><priority><middle>."
+  price-updated: "<middle>You have updated price of <main><tag> <middle>tag to <main><price><middle>."
+  prefix-updated: "<middle>You have updated prefix of <main><tag> <middle>tag to <main><prefix><middle>."
+  color-updated: "<middle>You have updated color of <main><tag> <middle>tag to <main><color>Color<middle>."
+  purchasable-updated: "<middle>You have updated purchasable status of <main><tag> <middle>tag to <main><status><middle>."
+  tag-reset: "<#4ADE80>✓ <middle>You have reset your tag."
+  tag-selected: "<middle>You have updated your tag to <main><tag><middle>."
+  no-tag-selected: "<main>✗ <middle>You don't have a tag selected."
+  already-selected: "<main>✗ <middle>You already have a tag selected."
+  no-permission: "<main>✗ <middle>You don't own this tag."
+  not-active: "<main>✗ <middle>The <tag> <middle>tag is not in season right now."
+  scheduled: "<middle>The <main><tag> <middle>tag is now active from <main><from> <middle>until <main><until><middle>."
+  schedule-cleared: "<middle>The <main><tag> <middle>tag is no longer scheduled."
+  invalid-schedule: "<main>✗ <middle>Schedule bounds are MM-dd for a yearly window or yyyy-MM-dd for a one-off."
+  category:
+    already-exists: "<main>✗ <middle>Category <bright><tag> <middle>already exists."
+    cant-delete-default: "<main>✗ <middle>You can not delete default category."
+    created: "<middle>You have created <main><tag> <middle>category."
+    deleted: "<middle>You have deleted <main><tag> <middle>category."
+    default-on: "<middle>Category <main><category> <middle>is now default."
+    default-off: "<middle>Category <main><category> <middle>is no longer default."
+    visible: "<middle>Category <main><category> <middle>is now visible."
+    invisble: "<middle>Category <main><category> <middle>is no longer visible."
+    priority: "<middle>Updated priority of <main><tag> <middle>category to <main><priority><middle>."
+    tag-added: "<middle>Added <main><tag> <middle>to <main><category> <middle>category."
+    tag-removed: "<middle>Removed <main><tag> <middle>from <main><category> <middle>category."
+    already-has-tag: "<main>✗ <middle>Tag <bright><tag> <middle>is already part of <bright><category> <middle>category."
+    doesnt-have-tag: "<main>✗ <middle>Tag <bright><tag> <middle>is not a part of <bright><category> <middle>category."
+
+custom-tags:
+  not-enough-tokens: "<main>✗ <middle>You do not have enough tokens to create a custom tag!"
+  prompt-create-tag: "<#4ADE80>✓ <middle>Please type your tag design, if you wish to cancel type <#FBBF24>cancel<middle>."
+  prompt-cancelled: "<main>✗ <middle>You have cancelled the custom tag creation!"
+  prompt-failed-longer: "<main>✗ <middle>Custom tag can not be longer than 16 characters."
+  prompt-filtered-tag: "<main>✗ <middle>We are sorry but <#FBBF24><tag> <middle>tag does not pass our filter."
+  prompt-already-exists: "<main>✗ <middle>We are sorry but <#FBBF24><tag> <middle>tag already exists."
+  created: "<middle>You have successfully requested <main><tag><middle>."
+  deleted: "<middle>You have deleted your custom tag <main><tag><middle>."
+  deletion-cancelled: "<main>✗ <middle>You have cancelled the deletion process of <#FBBF24><tag> <middle>custom tag!"
+  not-approved: "<main>✗ <middle>Your custom tag <muted>(<tag><muted>) <middle>was not approved yet!"
+  not-accepted: "<main>✗ <middle>Your custom tag <muted>(<tag><muted>) <middle>was not accepted!"
+  token-returned: "<#4ADE80>✓ <middle>A custom tag token has been returned to you. Tokens: <#FBBF24><amount><middle>!"
+
+custom-tags-admin:
+  accepted: "<middle>You have accepted <main><target><middle>'s custom tag <muted>(<tag><muted>)<middle>."
+  denied: "<middle>You have denied <main><target><middle>'s custom tag <muted>(<tag><muted>)<middle>."
+  accept-cancelled: "<main>✗ <middle>You have cancelled the acceptance process of <#FBBF24><tag> <middle>custom tag that was requested by <target><middle>!"
+  deny-cancelled: "<main>✗ <middle>You have cancelled the denial process of <#FBBF24><tag> <middle>custom tag that was requested by <target><middle>!"
+  added-tokens: "<middle>You have added <main><amount> <middle>custom tag tokens to <main><target> <middle>and they now have <main><newTokens> <middle>custom tag tokens."
+  removed-tokens: "<middle>You have removed <main><amount> <middle>custom tag tokens from <main><target> <middle>and they have been left with <main><leftTokens> <middle>custom tag tokens."
+  not-enough-tokens: "<target> <main>does not have enough tokens."
+  check: "<target> <middle>has <main><amount> <middle>custom tag tokens."
+  format: " <secondary>● <middle>Status: <status><middle>, Tag: <main><tag> <muted>[ID: <tagId>]"
+
+auth:
+  setup-failed: "<main>✗ <middle>There was an error while trying to setup your 2FA."
+  need-to-setup-auth-alert: "<main>You need to setup 2FA."
+  need-to-auth-alert: "<main>You need to authenticate yourself."
+  auth-method-not-enabled: "<main>✗ <middle>This authentication method is not enabled."
+  no-need-to: "<main>✗ <middle>You don't have to auth right now."
+  already-enabled: "<main>✗ <middle>You have already setup 2FA"
+  not-enabled: "<main>✗ <middle>You haven't setup 2FA."
+  invalid-code: "<main>✗ <middle>That code is invalid. You have <bright><attempts><middle> attempts remaining."
+  successful: "<#4ADE80>✓ <middle>You have been authenticated."
+  yubikey-specific: "<middle>Please do <main>/auth <middle>and the yubikey code."
+  reset: "<middle>You have reset <main><player><middle>'s 2FA."
+  force: "<middle>You have forced <main><player> <middle>to setup 2FA."
+  qrcode-url: "<#4ADE80>✓ <middle>In case the map is empty click here."
+  already-authed: "<#4ADE80>✓ <middle>You've automatically been authenticated since you logged in with the same address."
+  code-required: "<main>✗ <middle>A code is required with the <type> authentication type."
+  cannot-chat: "<main>✗ <middle>You can't chat before completing your 2FA."
+  cannot-command: "<main>✗ <middle>You can't execute this command before completing your 2FA."
+
+exec-cmd:
+  perform-command: "<middle>You have performed <main><cmd> <middle>on <main><server><middle>."
+  group-doesnt-exist: "<main>✗ <middle>Group <bright><group> <middle>doesn't exist."
+  perform-group-cmd: "<middle>You have performed <main><cmd> <middle>on every server in <main><group> <middle>group."
+  perform-global-cmd: "<middle>You have performed <main><cmd> <middle>on every server."
+  perform-cmd-all-alert: "<#7DD3FC>[S] <muted>[<server>] <main><sender> <middle>executed: <main><command> <middle>on all servers."
+  perform-cmd-server-alert: "<#7DD3FC>[S] <muted>[<server>] <main><sender> <middle>executed: <main><command> <middle>on <main><executed><middle>."
+
+group-info:
+  list:
+    - ""
+    - "<main><bold>Available Groups:</bold>"
+    - "  <secondary>● <middle><groups>"
+    - ""
+  servers:
+    - ""
+    - "<main><bold>Available Servers:</bold>"
+    - "  <secondary>● <middle><servers>"
+    - ""
+
+analytics:
+  loading: "<muted><italic>Loading Analytics, please wait...</italic>"
+  message:
+    - "<main><bold>Server Analytics </bold><muted>(Global)"
+    - " <secondary>● <middle>Online: <main><online>"
+    - ""
+    - "<main><bold>Total Player Peak</bold>"
+    - " <secondary>● <middle>Today: <main><peak>"
+    - " <secondary>● <middle>Yesterday: <main><peakYesterday> <muted>(<peakYesterdayDiff><muted>)"
+    - " <secondary>● <middle>Last Week: <main><peakWeek> <muted>(<peakWeekDiff><muted>)"
+    - ""
+    - "<main><bold>Total Average Playtime</bold>"
+    - " <secondary>● <middle>Today: <main><playtime>"
+    - " <secondary>● <middle>Yesterday: <main><playtimeYesterday> <muted>(<playtimeYesterdayDiff><muted>)"
+    - " <secondary>● <middle>Last Week: <main><playtimeWeek> <muted>(<playtimeWeekDiff><muted>)"
+    - ""
+    - "<main><bold>Total Logins</bold>"
+    - " <secondary>● <middle>Today: <main><logins>"
+    - " <secondary>● <middle>Yesterday: <main><loginsYesterday> <muted>(<loginsYesterdayDiff><muted>)"
+    - " <secondary>● <middle>Last Week: <main><loginsWeek>"
+    - " <secondary>● <middle>Last Month: <main><loginsMonth>"
+    - ""
+    - "<main><bold>Total Server Switches</bold>"
+    - " <secondary>● <middle>Today: <main><switches>"
+    - " <secondary>● <middle>Yesterday: <main><switchesYesterday>"
+    - ""
+    - "<main><bold>Retention </bold><muted>(new = first seen in 30 days)"
+    - " <secondary>● <middle>Unique Today: <main><uniquePlayers> <muted>(<newPlayers> new, <returningPlayers> returning)"
+    - " <secondary>● <middle>Unique Yesterday: <main><uniquePlayersYesterday> <muted>(<newPlayersYesterday> new)"
+    - " <secondary>● <middle>D1 Retention: <main><d1Retention>"
+    - " <secondary>● <middle>D7 Retention: <main><d7Retention>"
+
+proxy-info:
+  info:
+    - ""
+    - "<main><bold><proxy> Information</bold>"
+    - " <secondary>● <middle>Display Name: <main><display>"
+    - " <secondary>● <middle>Group: <main><group>"
+    - " <secondary>● <middle>Region: <main><region>"
+    - " <secondary>● <middle>Players: <main><count> / <max>"
+    - " <secondary>● <middle>Whitelisted: <main><whitelisted>"
+    - ""
+  proxies:
+    - ""
+    - "<main><bold>Available Proxies:</bold>"
+    - "  <secondary>● <middle><proxies>"
+    - ""
+  delete: "<middle>You have deleted the <main><proxy> <middle>proxy."
+
+server-info:
+  info:
+    - ""
+    - "<main><bold><server> Information</bold>"
+    - " <secondary>● <middle>Display Name: <main><display>"
+    - " <secondary>● <middle>Group: <main><group>"
+    - " <secondary>● <middle>Region: <main><region>"
+    - " <secondary>● <middle>TPS: <main><tps>"
+    - " <secondary>● <middle>Players: <main><count> / <max>"
+    - " <secondary>● <middle>Whitelisted: <main><whitelisted>"
+    - ""
+  servers:
+    - ""
+    - "<main><bold>Available Servers:</bold>"
+    - "  <secondary>● <middle><servers>"
+    - ""
+  delete: "<middle>You have deleted the <main><server> <middle>server."
+
+notes:
+  added:
+    - ""
+    - "<main><bold>Note Added</bold>"
+    - " <secondary>● <middle>Player: <main><player>"
+    - " <secondary>● <middle>ID: <main><note>"
+    - ""
+  removed:
+    - ""
+    - "<main><bold>Note Removed</bold>"
+    - " <secondary>● <middle>Player: <main><player>"
+    - " <secondary>● <middle>Note: <main><note>"
+    - ""
+  does-not-exist: "<main>✗ <middle>Note with this ID does not exist."
+  format: " <secondary>● <middle><issuedBy> <muted><italic>(<date>)</italic><middle>: <reason>"
+  remove-x: "<middle> <main><bold>[✘]</bold>"
+  hover-rem0ve: "<main>» <middle>Click to remove this note."
+  on-login:
+    # How many of the latest notes to show?
+    amount: 3
+
+    # Required Permission: core.notes.view
+    message:
+      - ""
+      - "<middle>Showing you the last <main><amount> <middle>notes of <player><middle>."
+      - "<notes>"
+      - ""
+
+chat-snapshot:
+  created: "<middle>You have created a chat snapshot with the id <main><id><middle>."
+  no-chat-messages: "<main>✗ <middle>No chat messages have been sent in the chat yet."
+  deleted: "<middle>You have deleted the chat snapshot with the id <main><id><middle>."
+
+chat-logs:
+  clear: "<middle>You have cleared <target><middle>'s chat logs."
+  format: " <secondary>● <rail>[#<id>] <muted><italic>(<date>) </italic><middle><prefix><sender><middle>: <message>"
+
+socials:
+  sync-discord: "<main>✗ <middle>Please use /sync to update your discord."
+  enter-url: "<middle>Type your <main><social> <middle>social media url."
+  updated: "<middle>You have updated your <main><social> <middle>to <main><url><middle>."
+  invalid-url: "<main>✗ <middle>You have entered an invalid url."
+
+proof:
+  cancelled: "<main>✗ <middle>Cancelled"
+  type: "<#4ADE80>✓ <middle>Is this a <#FBBF24>Link<middle> or a <#FBBF24>Chat Snapshot<middle> proof? <middle>Type <#FBBF24>Link<middle> or <#FBBF24>Snapshot<middle>."
+  proof: "<#4ADE80>✓ <middle>Please input the proof."
+  proof-added: "<#4ADE80>✓ <middle>Proof added."
+
+security:
+  not-security-user: "<main>✗ <middle>You need to be a security user to use this."
+  not-admin: "<main>✗ <middle>You need to be an admin security user to use this."
+  added: "<middle>You have added <main><player> <middle>as a security user."
+  already-added: "<main>✗ <middle><player><middle> is already a security user."
+  removed: "<middle>You have removed <main><player><middle>'s security user."
+  not-in-list: "<main>✗ <middle><player><middle> is not a security user."
+  list-format: "<main><player> <muted>(Added By: <issuedBy><muted>, Admin: <middle><admin><muted>)"
+
+  # Sent to admins on every server when the security check punishes somebody.
+  # Available Placeholders: <server> - Gets the server display name, <target> - Who was punished,
+  # <actor> - Who acted on them, <rank> - The rank involved
+  alert-grant: "<#7DD3FC>[S] <muted>[<server>] <main><actor> <middle>tried to grant <main><rank> <middle>to <main><target> <middle>without verification."
+  alert-grant-join: "<#7DD3FC>[S] <muted>[<server>] <main><target> <middle>joined holding <main><rank><middle>, granted by an unverified account."
+  alert-op-join: "<#7DD3FC>[S] <muted>[<server>] <main><target> <middle>joined opped without verification."
+  alert-op: "<#7DD3FC>[S] <muted>[<server>] <main><actor> <middle>tried to op <main><target> <middle>without verification."
+  alert-op-unknown: "<#7DD3FC>[S] <muted>[<server>] <main><actor> <middle>tried to op <main><target><middle>, who has no profile."
+
+# Pushing resource packs with /resourcepack.
+resource-pack:
+  pushed: "<#4ADE80>✓ <middle>Pushed the pack to <bright><player><middle>."
+  pushed-all: "<#4ADE80>✓ <middle>Pushed the pack to <bright><amount><middle> player(s). Remove it with <bright>/pack remove <url><middle>."
+  push-failed: "<main>✗ <middle>Could not push the pack to <bright><player><middle>. Their client may be older than 1.20.3."
+  removed-all: "<#4ADE80>✓ <middle>Removed the pack from <bright><amount><middle> player(s)."
+  cleared-all: "<#4ADE80>✓ <middle>Cleared every pack for <bright><amount><middle> player(s)."
+
+# Moving players to another server with /transfer.
+transfer:
+  disabled: "<main>✗ <middle>Transfers are disabled."
+  server-too-old: "<main>✗ <middle>Transfers need Minecraft 1.20.5 or newer on this server."
+  client-too-old: "<main>✗ <middle><player> is on a client too old to be transferred."
+  invalid-port: "<main>✗ <middle>That port is not valid."
+  not-allowed: "<main>✗ <middle><host> is not in the transfer allowlist."
+  sending: "<#4ADE80>✓ <middle>Transferring <bright><player><middle> to <bright><host><middle>."
+  failed: "<main>✗ <middle>The transfer could not be sent."
+
+# Ban waves: punishments staged now and released together later.
+ban-wave:
+  disabled: "<main>✗ <middle>Ban waves are turned off."
+  doesnt-exist: "<main>✗ <middle>There is no wave called <bright><wave><middle>."
+  already-exists: "<main>✗ <middle>A wave called <bright><wave><middle> already exists."
+  created: "<#4ADE80>✓ <middle>Started the wave <bright><wave><middle>."
+  staged: "<#4ADE80>✓ <middle>Staged <player><middle> in <bright><wave><middle>, now <bright><amount><middle> account(s)."
+  unstaged: "<#4ADE80>✓ <middle>Took <player><middle> back out of <bright><wave><middle>."
+  already-staged: "<main>✗ <middle><player><middle> is already staged in this wave."
+  not-staged: "<main>✗ <middle><player><middle> is not staged in this wave."
+  no-permission: "<main>✗ <middle>You can not issue a <type><middle>, so you can not stage one."
+  empty: "<main>✗ <middle>The wave <bright><wave><middle> has nothing staged in it."
+  none: "<main>✗ <middle>There are no waves waiting."
+  cancelled: "<main>✗ <middle>Threw away the wave <bright><wave><middle>."
+  manual: "<muted>on release"
+  permanent: "Permanent"
+
+  # Marks an address punishment in the staged list.
+  ip-prefix: "IP "
+
+  # Shown when a wave that never went out is asked to be taken back.
+  not-released: "<main>✗ <middle><wave><middle> has not gone out yet. Cancel it instead."
+  nothing-to-void: "<main>✗ <middle><wave><middle> did not issue any punishments."
+  confirm-void: "<#FBBF24>⚑ <middle>Void all <main><amount><middle> punishments from <main><wave><middle>?"
+  voided: "<#4ADE80>✓ <middle>Voided <#FBBF24><amount><middle> punishments from <#FBBF24><wave><middle> as <#FBBF24><void_reason><middle>."
+  no-address: "<main>✗ <middle><player><middle> has no known address to ban."
+
+  # Scheduling. <when> is the date and time, <remaining> how long until then.
+  scheduled: "<#4ADE80>✓ <middle>The wave <bright><wave><middle> goes out at <bright><when> <muted>(<remaining>)<middle>."
+  unscheduled: "<#4ADE80>✓ <middle>The wave <bright><wave><middle> will now wait to be released by hand."
+  bad-time: "<main>✗ <middle>Use a date and time like <bright>2026-08-30 18:00<middle>, or a duration like <bright>12h<middle>."
+  time-passed: "<main>✗ <middle>That moment has already passed."
+  confirm: "<main>✗ <middle>Release <wave> now? <amount> account(s) will be punished."
+  list-header:
+    - "<muted><strikethrough>----------------------------------------</strikethrough>"
+    - "<main><bold>Ban waves </bold><muted>- waiting"
+  list-entry: " <secondary>● <main><wave> <muted>- <middle><amount> <middle>account(s), <main><when>"
+  view-header: "<main><bold><wave> </bold><muted>- <middle><amount> account(s), <main><when>"
+  view-entry: " <secondary>● <main><player> <muted>- <middle><type> <main><time> <7>- <middle><reason>"
+
+  # Said once on every server when a wave goes out.
+  broadcast: "<gradient:#FF5F6D:#C81E4A><bold>BAN WAVE</bold></gradient> <rail>» <middle><amount> <muted>accounts have been removed."
+
+reboot:
+  already-rebooting: "<main>✗ <middle>The server is already rebooting."
+  not-rebooting: "<main>✗ <middle>The server is not rebooting."
+  rebooting-in: "<middle>The server will be rebooting in <main><time><middle>."
+  cancelled: "<main>✗ <middle>The server reboot has been cancelled."
+  scheduled: "<middle>The server will reboot in <main><time><middle>."
+  cancelled-staff: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>cancelled the reboot."
+  scheduled-staff: "<#7DD3FC>[S] <muted>[<server>] <player> <middle>scheduled a reboot <muted>(<time>)<middle>."
+  reboot-scheduled-in: "<middle>This server is scheduled to reboot in <main><time><middle>."
+  title-enabled: true
+  title: "<main><bold>Server Reboot</bold>"
+  subtitle: "<middle>Rebooting in <main><time>"
+  kick:
+    - "<main>The server is rebooting."
+
+timeline:
+  timeline: "<main>Timeline:"
+  parted-ways: "<player> <middle>parted ways with the staff team on <main><date><middle>."
+  helped-for: "<player> <middle>helped the staff team for <main><time><middle>."
+  helping-for: "<player> <middle>has been helping the staff team for <main><time><middle>."
+  joined: "<player> <middle>joined the staff team on <main><date> <middle>and was given <rank> <middle>by <granter><middle>."
+  promoted: "<player> <middle>was <#4ADE80>promoted to <rank> <middle>on <main><date> <middle>by <granter><middle>."
+  demoted: "<player> <middle>was <main>demoted from <rank> <middle>on <main><date> <middle>by <granter><middle>."
+  never-been-staff: "<main>✗ <middle>That player has never been apart of the staff team."
+
+antispam:
+  you-cant-send-twice: "<main>✗ <middle>You can't send the same message twice."
+
+mc-logs:
+  file-does-not-exist: "<main>✗ <middle>The specified file <#FBBF24>(<file>)<middle> does not exist."
+  file-is-dir: "<main>✗ <middle>The specified file <#FBBF24>(<file>)<middle> is a directory."
+  must-be-a-log-file: "&<main>The specified file <#FBBF24>(<file>)<main> is not a log file. Valid suffixes: .txt .log .gz"
+
+actionbars:
+  currently: "<#4ADE80>✓ <middle>You are currently <types><middle>"
+  type-color: "<#FBBF24>"
+  separator-color: "<#4ADE80>"
+  types:
+    vanished: "Vanished"
+    modmode: "In ModMode"
+    disguised: "Disguised"
+
+phoenix:
+  debug:
+    - "<gradient:#FF3B6B:#E91E63><bold>PHOENIX DEBUG</bold></gradient>"
+    - "<rail>┃ <muted>Profiles: <middle><profiles>"
+    - "<rail>┃ <muted>Ranks: <middle><ranks>"
+    - "<rail>┃ <muted>Servers: <middle><servers>"
+    - "<rail>┃ <muted>Proxies: <middle><proxies>"
+    - "<rail>┃ <muted>Filters: <middle><filters>"
+    - "<rail>┃ <muted>Grants: <middle><grants>"
+    - "<rail>┃ <muted>Punishments: <middle><punishments>"
+    - "<rail>┃ <muted>Logins: <middle><logins>"
+    - "<rail>┃ <muted>Chat Logs: <middle><chatLogs>"
+    - "<rail>┃ <muted>Tags: <middle><tags>"
+    - "<rail>┃ <muted>Tag Categories: <middle><categories>"
+    - "<rail>┃ <muted>Disguised Players: <middle><disguisedPlayers>"
+  git-id: "<bright>Git ID: <muted><id>"
+  version:
+    lines:
+      - "<gradient:#FF3B6B:#E91E63><bold>PHOENIX VERSION</bold></gradient>"
+      - "<rail>┃ <muted>Version: <middle><version>"
+      - "<rail>┃ <muted>Commit: <middle><commit>"
+      - "<rail>┃ <muted>Git Branch: <middle><branch>"
+      - "<rail>┃ <muted>Loader Branch: <middle><loader-branch>"
+      - "<rail>┃ <muted>Server: <middle><server>"
+    unknown: "unknown"
+  spawn-not-set: "<main>✗ <middle>Please set the spawn or turn off teleportation."
+
+  # What /phoenix import says while it works.
+  import:
+    already-started: "<main>✗ <middle>Import has already been started."
+    finished: "<#4ADE80>✓ <middle>Import finished!"
+    aquacore-finished: "<#4ADE80>✓ <middle>AquaCore import finished!"
+    aquacore-needs-mongo: "<main>✗ <middle>The AquaCore import reads Mongo through Phoenix's own connection, so Phoenix has to be on Mongo to run it."
+
+  # The lines /phoenix doctor reports with.
+  doctor:
+    done: "<muted>Done. Lines marked <#FBBF24>[WARN]<muted> or <main>[FAIL]<muted> deserve a look."
+    ok: "<#4ADE80>✓ <middle><message>"
+    warn: "<#FBBF24>⚑ <middle><message>"
+    fail: "<main>✗ <middle><message>"
+    todo: "<#7DD3FC>● <middle><message>"
+    detail: "     <rail><message>"
+
+  # The lines /phoenix setup reports with.
+  setup:
+    header: "<gradient:#FF3B6B:#E91E63><bold>PHOENIX SETUP</bold></gradient>"
+    done: "<muted><todo> unstarted, <warn> worth a look, <fail> broken. Fixes are shown under each line."
+    fix: "        <muted>fix: <bright><fix>"
+    fix-hover: "<#4ADE80>» <middle>Click to put <bright><command> <middle>in your chat box."
+    docs: "        <muted>guide: <bright><url>"
+    docs-hover: "<#4ADE80>» <middle>Click to open the guide for this in your browser."
+    changed: "<middle>Set <main><key> <middle>to <main><value><middle>."
+    unchanged: "<muted><key> was already that. Nothing was written."
+    cancelled: "<muted>Nothing was changed."
+    locked: "<main>✗ <middle><holder> is changing <area> right now. Try again in a moment."
+    failed: "<main>✗ <middle>Could not write that: <error>"
+    bypasses-granted: "<middle>Granted <main><count> <middle>bypass permissions to <main><rank><middle>."
+    no-area: "<main>✗ <middle>There is no setup area called <bright><area><middle>. Run <bright>/phoenix setup <middle>to see them."
+    startup-header: "<main><bold>PHOENIX</bold> <middle>has <main><count> <middle>setup items to look at:"
+    startup-footer: "<muted>Run <bright>/phoenix setup <muted>in game to see how to fix them."
+    join-reminder: "<main>» <middle>Phoenix has <main><count> <middle>setup items to look at. <bright>[Open setup]"
+    join-reminder-hover: "<#4ADE80>» <middle>Click to run <bright>/phoenix setup"
+    database:
+      header: "<main><bold>DATABASE TEST</bold> <muted>(global.yml as saved on disk)"
+      ok: "<#4ADE80>✓ <middle><backend> answered in <bright><millis>ms<middle>."
+      fail: "<main>✗ <middle><backend>: <bright><error>"
+      skipped: "<muted>● <middle><backend>: <bright><hint>"
+      hint: "     <rail><hint>"
+      note: "<muted>Restart the server to start using these settings."
+      broken-file: "<main>✗ <middle>global.yml can't be read: <bright><problem>"
+  update:
+    available: "<main>» <middle>Phoenix <main><latest> <middle>is out; this server runs <bright><current><middle>. Restart to load it."
+  config:
+    set-master: "<middle>Set master config server to <main><server><middle>."
+    updated: "<#4ADE80>✓ <middle>Loaded and updated config files from redis."
+    pushed: "<#4ADE80>✓ <middle>Pushed local config files to redis."
+    force-fetched: "<#4ADE80>✓ <middle>Updated all server's config files from redis."
+  reload:
+    failed: "<main>✗ <middle>Nothing was reloaded, because a file has a mistake:"
+    problem: "   <bright><problem>"
+  preview:
+    header: "<muted>Preview of <bright><key><muted>, as saved in messages.yml:"
+    unknown: "<main>✗ <middle>There is no message called <bright><key><middle>. Close matches: <bright><suggestions>"
+
+  permissions:
+    written: "<#4ADE80>✓ <middle>Wrote <main><count> <middle>permissions to <bright><file><middle>."
+    failed: "<main>✗ <middle>Could not write the file: <bright><error>"
+
+  claim:
+    claimed: "<#4ADE80>✓ <middle>You own this server now, with the <main><rank> <middle>rank."
+    security: "<middle>Set up two-factor auth next. It keeps the owner account safe if your password leaks."
+    wrong: "<main>✗ <middle>That code is wrong. <bright><left> <middle>tries left."
+    locked: "<main>✗ <middle>Too many wrong codes. Restart the server for a new one."
+    nothing: "<main>✗ <middle>There is nothing to claim on this server."
+    no-ranks: "<main>✗ <middle>There are no ranks yet. Run <bright>rank tools import-preset <middle>from the console first."

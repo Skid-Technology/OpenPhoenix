@@ -1,0 +1,8 @@
+name: 'Phoenix'
+version: 3.1-34677f1
+author: "[Refine Development Team]"
+main: 'xyz.refinedev.phoenix.Phoenix'
+api-version: "1.13"
+softdepend: [TAB, packetevents, PlaceholderAPI, Vault, floodgate]
+loadbefore: [NamelessMC]
+folia-supported: true

@@ -1,0 +1,2641 @@
+[
+  {
+    "_id": "22d7dbd0-0ce7-4c6c-8c45-500f5598a493",
+    "name": "Default",
+    "defaultRank": true,
+    "priority": 5,
+    "price": 0,
+    "permissions": [
+      {
+        "permission": "core.command.report",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.request",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.shrug",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.spawn",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.settings.tips",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7",
+    "prefixModern": "<#9CA3AF>",
+    "displayName": "&7Default",
+    "displayNameModern": "<#9CA3AF>Default",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&7",
+    "colorModern": "<#9CA3AF>",
+    "playerListPrefix": "&7",
+    "playerListPrefixModern": "<#9CA3AF>",
+    "visible": true,
+    "staff": false,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": false
+  },
+  {
+    "_id": "6f2a1c84-5b3e-4a71-9d20-8c4f1e7b3a55",
+    "name": "VIP",
+    "defaultRank": false,
+    "priority": 20,
+    "price": 500,
+    "permissions": [
+      {
+        "permission": "core.chat.colorcodes",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.craft",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.enderchest",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.repair",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.repair.hand",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.message.colored",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "22d7dbd0-0ce7-4c6c-8c45-500f5598a493"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&aVIP&7] &a",
+    "prefixModern": "<#6B7079>[<#4ADE80>VIP<#6B7079>] <#4ADE80>",
+    "displayName": "&aVIP",
+    "displayNameModern": "<#4ADE80>VIP",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&a",
+    "colorModern": "<#4ADE80>",
+    "playerListPrefix": "&aVIP &f",
+    "playerListPrefixModern": "<#4ADE80>VIP <#E7E9ED>",
+    "visible": true,
+    "staff": false,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": true
+  },
+  {
+    "_id": "b81d4f3a-2e69-4c05-8a17-3d9b6e2c4718",
+    "name": "VIP+",
+    "defaultRank": false,
+    "priority": 25,
+    "price": 1000,
+    "permissions": [
+      {
+        "permission": "core.antispam.bypass",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.repair.all",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.repair.armor",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.cooldowns.bypass",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.tags.*",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "6f2a1c84-5b3e-4a71-9d20-8c4f1e7b3a55"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&bVIP&f+&7] &b",
+    "prefixModern": "<#6B7079>[<#22D3EE>VIP<#FFFFFF>+<#6B7079>] <#22D3EE>",
+    "displayName": "&bVIP+",
+    "displayNameModern": "<#22D3EE>VIP+",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&b",
+    "colorModern": "<#22D3EE>",
+    "playerListPrefix": "&bVIP+ &f",
+    "playerListPrefixModern": "<#22D3EE>VIP+ <#E7E9ED>",
+    "visible": true,
+    "staff": false,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": true
+  },
+  {
+    "_id": "d3c07e91-8a4b-42f6-b5e8-1c7a9f206d34",
+    "name": "MVP",
+    "defaultRank": false,
+    "priority": 40,
+    "price": 2000,
+    "permissions": [
+      {
+        "permission": "core.command.disguise",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.disguise.name",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.redisguise",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.top",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.undisguise",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.disguise.*",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.join.*",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.joinfull",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "b81d4f3a-2e69-4c05-8a17-3d9b6e2c4718"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&6MVP&7] &6",
+    "prefixModern": "<#6B7079>[<#FBBF24>MVP<#6B7079>] <#FBBF24>",
+    "displayName": "&6MVP",
+    "displayNameModern": "<#FBBF24>MVP",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&6",
+    "colorModern": "<#FBBF24>",
+    "playerListPrefix": "&6MVP &f",
+    "playerListPrefixModern": "<#FBBF24>MVP <#E7E9ED>",
+    "visible": true,
+    "staff": false,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": true
+  },
+  {
+    "_id": "0a5e8b27-6d14-4f83-9c62-7e05a3b18f49",
+    "name": "Media",
+    "defaultRank": false,
+    "priority": 60,
+    "price": 0,
+    "permissions": [
+      {
+        "permission": "core.media",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "d3c07e91-8a4b-42f6-b5e8-1c7a9f206d34"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&dMedia&7] &d",
+    "prefixModern": "<#6B7079>[<#F472B6>Media<#6B7079>] <#F472B6>",
+    "displayName": "&dMedia",
+    "displayNameModern": "<#F472B6>Media",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&d",
+    "colorModern": "<#F472B6>",
+    "playerListPrefix": "&dMedia &f",
+    "playerListPrefixModern": "<#F472B6>Media <#E7E9ED>",
+    "visible": true,
+    "staff": false,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": false
+  },
+  {
+    "_id": "9c4b1a60-3f78-45d2-8e19-b06d5c8a2731",
+    "name": "Builder",
+    "defaultRank": false,
+    "priority": 70,
+    "price": 0,
+    "permissions": [
+      {
+        "permission": "core.builderchat",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.addlore",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.build",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.build.others",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.clear",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.enchant",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.feed",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.fly",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.gamemode",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.gamemode.adventure",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.gamemode.creative",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.gamemode.spectator",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.gamemode.survival",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.god",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.heal",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.item",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.more",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.removelore",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.rename",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.setspawn",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.skull",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.speed",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.teleportworld",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "d3c07e91-8a4b-42f6-b5e8-1c7a9f206d34"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&2Builder&7] &2",
+    "prefixModern": "<#6B7079>[<#15803D>Builder<#6B7079>] <#15803D>",
+    "displayName": "&2Builder",
+    "displayNameModern": "<#15803D>Builder",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&2",
+    "colorModern": "<#15803D>",
+    "playerListPrefix": "&2Builder &f",
+    "playerListPrefixModern": "<#15803D>Builder <#E7E9ED>",
+    "visible": true,
+    "staff": true,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": false
+  },
+  {
+    "_id": "5e17d93c-04a8-4b6f-9128-a7c3e05f4d86",
+    "name": "Helper",
+    "defaultRank": false,
+    "priority": 80,
+    "price": 0,
+    "permissions": [
+      {
+        "permission": "core.2fa",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.bypass.tabcomplete",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.clearchat.bypass",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.checkwarns",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.deletemessage",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.find",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.freeze",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.glist",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.hidestaff",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.history",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.invsee",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.jump",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.kick",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.lookup",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.medialist",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.modmode",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.mute",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.notes",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.notes.add",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.reports",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.reports.all",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.reports.watchlist",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.requestmute",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.security",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.setfreezeloc",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.socialspy",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.spawn.others",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.staffalert",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.stafflist",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.teleport",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.teleporthere",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.teleportposition",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.tempmute",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.timeline",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.togglestaffmessages",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.unmute",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.info",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.vanish",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.warn",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.watchlist",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.filter.bypass",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.globalchat.bypass",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.lunar.staffmods",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.mutechat.bypass",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.notes.view",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.restrictedHub",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.slowchat.bypass",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.staff",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "d3c07e91-8a4b-42f6-b5e8-1c7a9f206d34"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&9Helper&7] &9",
+    "prefixModern": "<#6B7079>[<#60A5FA>Helper<#6B7079>] <#60A5FA>",
+    "displayName": "&9Helper",
+    "displayNameModern": "<#60A5FA>Helper",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&9",
+    "colorModern": "<#60A5FA>",
+    "playerListPrefix": "&9Helper &f",
+    "playerListPrefixModern": "<#60A5FA>Helper <#E7E9ED>",
+    "visible": true,
+    "staff": true,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": false
+  },
+  {
+    "_id": "fb90e719-6c0a-407a-8981-a883dd171ca0",
+    "name": "Trainee",
+    "defaultRank": false,
+    "priority": 90,
+    "price": 0,
+    "permissions": [
+      {
+        "permission": "core.command.alts",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.ips",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.locations",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.lookup",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.menu",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.chatlogs",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.clearchat",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.commandlogs",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.ctempban",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.cunban",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.granthistory",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.grants",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.groupinfo",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.mclogs",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.mutechat",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.proxyinfo",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punish",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punishmentladder",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punishmentladder.list",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punishmentladder.listpunishments",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punishmentladder.punish",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.reports.stats",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.serverinfo",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.shadowmute",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.shadowtempmute",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.slowchat",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.staffactivity",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.staffhistory",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.tempban",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.tempipmute",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.staffinfo",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.punish.*",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "5e17d93c-04a8-4b6f-9128-a7c3e05f4d86"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&eTrainee&7] &e",
+    "prefixModern": "<#6B7079>[<#FACC15>Trainee<#6B7079>] <#FACC15>",
+    "displayName": "&eTrainee",
+    "displayNameModern": "<#FACC15>Trainee",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&e",
+    "colorModern": "<#FACC15>",
+    "playerListPrefix": "&eTrainee &f",
+    "playerListPrefixModern": "<#FACC15>Trainee <#E7E9ED>",
+    "visible": true,
+    "staff": true,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": false
+  },
+  {
+    "_id": "45971a4b-dc6e-42c6-aa00-9c93a4f8a8c6",
+    "name": "Mod",
+    "defaultRank": false,
+    "priority": 100,
+    "price": 0,
+    "permissions": [
+      {
+        "permission": "core.command.adminprofile",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alert",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.address",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.debug",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.ban",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.broadcast",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.cban",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.chatsnapshot",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.chatsnapshot.create",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.chatsnapshot.own",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.chatsnapshot.player",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.chatsnapshot.view",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.clear.others",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.disguiseadmin",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.disguiseadmin.checkdisguise",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.disguiseadmin.history",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.disguiseadmin.listdisguised",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.disguiseadmin.undisguise",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.enderchest.other",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.feed.others",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.filter",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.fly.others",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.gamemode.others",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.heal.others",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.ipban",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.ipmute",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.kill",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.masssay",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.modmode.others",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.notes.remove",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.panic",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.pull",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.reban",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.removewarn",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.remute",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.send",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.staffbroadcast",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.teleportall",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.tempipban",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.unban",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.unpanic",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.vanish.others",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.history.viewaddedby",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "fb90e719-6c0a-407a-8981-a883dd171ca0"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&5Mod&7] &5",
+    "prefixModern": "<#6B7079>[<#A855F7>Mod<#6B7079>] <#A855F7>",
+    "displayName": "&5Mod",
+    "displayNameModern": "<#A855F7>Mod",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&5",
+    "colorModern": "<#A855F7>",
+    "playerListPrefix": "&5Mod &f",
+    "playerListPrefixModern": "<#A855F7>Mod <#E7E9ED>",
+    "visible": true,
+    "staff": true,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": false
+  },
+  {
+    "_id": "c2d8f174-9b30-4e56-a8c1-6f04b729d3e0",
+    "name": "SrMod",
+    "defaultRank": false,
+    "priority": 110,
+    "price": 0,
+    "permissions": [
+      {
+        "permission": "core.command.alts.suppress",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.suppressed",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.trust",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.untrust",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.antivpn",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.banwave",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.banwave.add",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.banwave.create",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.banwave.list",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.banwave.remove",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.banwave.schedule",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.banwave.unschedule",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.banwave.view",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.blacklist",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.chatlogs.clear",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.chatsnapshot.delete",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.disguiseadmin.disguise",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.force2fa",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.reblacklist",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.reset2fa",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.staffrollback",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.unblacklist",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.disguise",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.voidpunishment",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.disguise.real.bypass",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.history.viewblacklists",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.punish.duration.bypass",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "45971a4b-dc6e-42c6-aa00-9c93a4f8a8c6"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&5&lSrMod&7] &5",
+    "prefixModern": "<#6B7079>[<#C084FC><bold>SrMod<#6B7079>] <#C084FC>",
+    "displayName": "&5SrMod",
+    "displayNameModern": "<#C084FC>SrMod",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&5",
+    "colorModern": "<#C084FC>",
+    "playerListPrefix": "&5SrMod &f",
+    "playerListPrefixModern": "<#C084FC>SrMod <#E7E9ED>",
+    "visible": true,
+    "staff": true,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": false
+  },
+  {
+    "_id": "a028126a-4559-4007-b628-b7986d5b89da",
+    "name": "Admin",
+    "defaultRank": false,
+    "priority": 120,
+    "price": 0,
+    "permissions": [
+      {
+        "permission": "core.admin",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.adminchat",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.address.clear",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.address.force-shared",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.alts.address.force-trusted",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.analytics",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.banwave.cancel",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.banwave.release",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.banwave.void",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.customtagsadmin",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.customtagsadmin.add-tokens",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.customtagsadmin.check-tokens",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.customtagsadmin.list",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.customtagsadmin.manage",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.customtagsadmin.remove-tokens",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.domainstats",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.grant",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.maintenance",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.notifications.create",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.notifications.delete",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.notifications.list",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.notifications.lore",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.notifications.stats",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.notifications.title",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.ogrant",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punishmentladder.addpunishment",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punishmentladder.create",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punishmentladder.delete",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punishmentladder.deletepunishment",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punishmentladder.editpunishment",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punishmentladder.hidden",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.punishmentladder.priority",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.rank",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.rawalert",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.reports.categories",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.resourcepack",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.rgrant",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.sudo",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.tags.admin",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.timer",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.transfer",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.addperm",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.clearalts",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.clearcooldowns",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.cleargrants",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.clearips",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.clearperm",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.clearpunishments",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.listperm",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.removeperm",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.searchperm",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.voidbans",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.voidblacklists",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.voidmutes",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.whitelist",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.wipekicks",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.wipewarns",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.immune",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "c2d8f174-9b30-4e56-a8c1-6f04b729d3e0"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&cAdmin&7] &c",
+    "prefixModern": "<#6B7079>[<#EF4444>Admin<#6B7079>] <#EF4444>",
+    "displayName": "&cAdmin",
+    "displayNameModern": "<#EF4444>Admin",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&c",
+    "colorModern": "<#EF4444>",
+    "playerListPrefix": "&cAdmin &f",
+    "playerListPrefixModern": "<#EF4444>Admin <#E7E9ED>",
+    "visible": true,
+    "staff": true,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": false
+  },
+  {
+    "_id": "e6b3095d-71c8-4a2f-b04e-52d9c7183a6b",
+    "name": "Developer",
+    "defaultRank": false,
+    "priority": 125,
+    "price": 0,
+    "permissions": [
+      {
+        "permission": "core.command.bungeereload",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.execcmd",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.phoenix",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.phoenix.config",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.phoenix.editor",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.reboot",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "45971a4b-dc6e-42c6-aa00-9c93a4f8a8c6"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&3Dev&7] &3",
+    "prefixModern": "<#6B7079>[<#0EA5E9>Dev<#6B7079>] <#0EA5E9>",
+    "displayName": "&3Developer",
+    "displayNameModern": "<#0EA5E9>Developer",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&3",
+    "colorModern": "<#0EA5E9>",
+    "playerListPrefix": "&3Dev &f",
+    "playerListPrefixModern": "<#0EA5E9>Dev <#E7E9ED>",
+    "visible": true,
+    "staff": true,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": false
+  },
+  {
+    "_id": "03e81406-da06-42d6-a5a6-d2820ccfae2b",
+    "name": "Manager",
+    "defaultRank": false,
+    "priority": 950,
+    "price": 0,
+    "permissions": [
+      {
+        "permission": "core.command.proxyinfo.delete",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.registerserver",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.serverinfo.delete",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.unregisterserver",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.gdpr.delete",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.gdpr.export",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.command.user.massaddperm",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.grant.*",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.immune.bypass",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      },
+      {
+        "permission": "core.managementchat",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "a028126a-4559-4007-b628-b7986d5b89da",
+      "e6b3095d-71c8-4a2f-b04e-52d9c7183a6b"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&4&oManager&7] &4&o",
+    "prefixModern": "<#6B7079>[<#B91C1C><italic>Manager<#6B7079>] <#B91C1C><italic>",
+    "displayName": "&4&oManager",
+    "displayNameModern": "<#B91C1C><italic>Manager",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&4&o",
+    "colorModern": "<#B91C1C><italic>",
+    "playerListPrefix": "&4&oManager &f",
+    "playerListPrefixModern": "<#B91C1C><italic>Manager <#E7E9ED>",
+    "visible": true,
+    "staff": true,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": false
+  },
+  {
+    "_id": "3981a4b2-2ceb-4d8b-9675-87984ccae6f4",
+    "name": "Owner",
+    "defaultRank": false,
+    "priority": 1000,
+    "price": 0,
+    "permissions": [
+      {
+        "permission": "core.command.user.delete",
+        "scopes": [
+          {
+            "scope": "global"
+          }
+        ]
+      }
+    ],
+    "inheritance": [
+      "03e81406-da06-42d6-a5a6-d2820ccfae2b"
+    ],
+    "scopes": [
+      {
+        "scope": "global"
+      }
+    ],
+    "prefix": "&7[&4Owner&7] &4",
+    "prefixModern": "<#6B7079>[<#DC2626>Owner<#6B7079>] <#DC2626>",
+    "displayName": "&4Owner",
+    "displayNameModern": "<#DC2626>Owner",
+    "suffix": "",
+    "suffixModern": "",
+    "color": "&4",
+    "colorModern": "<#DC2626>",
+    "playerListPrefix": "&4Owner &f",
+    "playerListPrefixModern": "<#DC2626>Owner <#E7E9ED>",
+    "visible": true,
+    "staff": true,
+    "subscription": false,
+    "grantable": true,
+    "purchasable": false
+  }
+]

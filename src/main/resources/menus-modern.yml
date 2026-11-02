@@ -1,0 +1,1857 @@
+# ===========================================================================
+#  Phoenix — menus.yml   ·   modern set
+# 
+#  Written in place of the default set on 1.16 and newer, where hex and
+#  gradients render. Same wording and layout as the default; deeper colour.
+# 
+#  REQUIRES  mini-message: true  in config.yml, which the plugin turns on for
+#  you when it writes this file. Without it the <gradient:...> tags below are
+#  printed rather than parsed.
+# 
+#  THREE KEYS RECOLOUR THE NETWORK — global.yml, under network.colors:
+#      main       &#FF3B6B   the subject of the sentence: names and values
+#      secondary  &#E91E63   structure: the lore rail, bullets, marks
+#      middle     &#C9C4C6   body prose
+#  The literal hex below is the supporting palette and is not themed:
+#      #F5F1F2 bright   #8A7F84 muted    #5A4A50 rail
+#      #4ADE80 success  #FBBF24 caution  #7DD3FC staff channel
+#  Gradients carry their own hex too, so they do not follow the three keys.
+# 
+#  MARKS   ✓ done    ✗ refused or issued    ⚑ needs attention
+#          ● list row    ┃ lore rail    » action or breadcrumb
+# ===========================================================================
+
+general:
+  # The buttons and lines the native forms share.
+  # Forms have no pages of their own, so these move through the list.
+  form:
+    close: "<muted>Close"
+    back: "<muted>« Back"
+    next: "<middle>Next <rail><page>/<pages>"
+    previous: "<middle>Back <rail><page>/<pages>"
+    showing: "<muted><from>-<to> of <total>"
+
+    # How a setting reads on a form. A button has no lore to carry its state,
+    # so the state is drawn into the label itself.
+    toggle-on: "<#4ADE80>■ <bright><name>"
+    toggle-off: "<rail>■ <bright><name>"
+    option: "<#FBBF24>■ <bright><name><muted>: <bright><option>"
+  next-page-slot:
+    material: "SKULL_ITEM"
+    durability: 3
+    head: true
+    head-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTliZjMyOTJlMTI2YTEwNWI1NGViYTcxM2FhMWIxNTJkNTQxYTFkODkzODgyOWM1NjM2NGQxNzhlZDIyYmYifX19"
+    name: "<main><bold>Next</bold> <rail><page>/<pages>"
+    lore:
+      - ""
+      - "<muted>Right click to view all pages."
+  previous-page-slot:
+    material: "SKULL_ITEM"
+    durability: 3
+    head: true
+    head-texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQ2OWUwNmU1ZGFkZmQ4NGU1ZjNkMWMyMTA2M2YyNTUzYjJmYTk0NWVlMWQ0ZDcxNTJmZGM1NDI1YmMxMmE5In19fQ=="
+    name: "<main><bold>Back</bold> <rail><page>/<pages>"
+    lore:
+      - ""
+      - "<muted>Right click to view all pages."
+  fill-slot:
+    material: "STAINED_GLASS_PANE"
+    durability: 15
+  back-slot:
+    material: "BED"
+    durability: 0
+    name: "<main><bold>Back</bold>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to go back."
+  filters-slot:
+    name: "<main><bold>Filters</bold>"
+    material: "HOPPER"
+    slot: 4
+    selector: " <main>»"
+    enabled-filter: " <#4ADE80>✓ <middle><filter>"
+    disabled-filter: " <rail>✗ <muted><filter>"
+    lore:
+      - "<filters>"
+      - ""
+      - "<#4ADE80>» <middle>Left/Right click to scroll."
+      - "<main>» <middle>Middle click to select."
+
+filters:
+  no-filters: "<main>There are no filters available!"
+  title: "<main><bold>FILTERS</bold> <rail>» <middle><filter>"
+  hard-trait:
+    name: "<main>Hard"
+    material: "LEVER"
+    description:
+      - " <rail>┃ <middle>Should the filter be hard?"
+  auto-punish-trait:
+    name: "<main>Auto Punish"
+    material: "REDSTONE"
+    description:
+      - " <rail>┃ <middle>Should the filter automatically"
+      - " <rail>┃ <middle>punish offenders?"
+  punish-ladder:
+    name: "<main>Punishment Ladder"
+    material: "PAPER"
+    description:
+      - ""
+      - " <rail>┃ <muted>Current: <main><current>"
+      - ""
+      - "<#4ADE80>» <middle>Click to select punishment ladder."
+    ladder-format: "<main><ladder>"
+  type:
+    name: "<main>Filter Type"
+    material: "HOPPER"
+    description:
+      - " <rail>┃ <middle>Change the filter type."
+      - ""
+      - "<types>"
+      - ""
+      - "<#4ADE80>» <middle>Click to change."
+    format: " <rail>■ <bright><type>"
+    format-selected: " <#4ADE80>■ <bright><type>"
+
+analytics:
+  title: "<main><bold>ANALYTICS</bold> <rail>» <middle><server>"
+  player-peak:
+    name: "<main><bold>Player Peak</bold>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Today: <main><peak>"
+      - " <rail>┃ <muted>Yesterday: <main><yesterdayPeak> <muted>(<yesterdayDiff><muted>)"
+      - " <rail>┃ <muted>Last Week: <main><weekPeak> <muted>(<weekDiff><muted>)"
+  average-playtime:
+    name: "<main><bold>Average Playtime</bold>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Today: <main><playtime>"
+      - " <rail>┃ <muted>Yesterday: <main><yesterdayPlaytime> <muted>(<yesterdayDiff><muted>)"
+      - " <rail>┃ <muted>Last Week: <main><weekPlaytime> <muted>(<weekDiff><muted>)"
+
+server-info:
+  servers-in-group-title: "<main><bold>SERVERS</bold> <rail>» <middle><group>"
+  spigot-server-name: "<main><name>"
+  spigot-server-info-online:
+    - " <rail>┃ <muted>Name: <main><name>"
+    - " <rail>┃ <muted>Version: <main><version>"
+    - " <rail>┃ <muted>Region: <main><region>"
+    - " <rail>┃ <muted>Group: <main><group>"
+    - " <rail>┃ <muted>Port: <main><port>"
+    - ""
+    - "<main><bold>Status </bold><muted>(Uptime: <uptime>)"
+    - " <rail>┃ <muted>Online: <main><online> <muted>(Counting: <countingPlayers><muted>)"
+    - " <rail>┃ <muted>Vanished: <main><vanished>"
+    - " <rail>┃ <muted>Started At: <main><startedAt>"
+    - " <rail>┃ <muted>Last Update: <main><lastUpdate>"
+    - ""
+    - "<main>Left click to stop <secondary><underlined><server></underlined><main>."
+    - "<main>Right click to view analytics."
+  spigot-server-info-whitelisted:
+    - " <rail>┃ <muted>Name: <main><name>"
+    - " <rail>┃ <muted>Version: <main><version>"
+    - " <rail>┃ <muted>Region: <main><region>"
+    - " <rail>┃ <muted>Group: <main><group>"
+    - " <rail>┃ <muted>Port: <main><port>"
+    - ""
+    - "<main><bold>Status </bold><muted>(Uptime: <uptime>)"
+    - " <rail>┃ <muted>Online: <main><online> <muted>(Counting: <countingPlayers><muted>)"
+    - " <rail>┃ <muted>Vanished: <main><vanished>"
+    - " <rail>┃ <muted>Started At: <main><startedAt>"
+    - " <rail>┃ <muted>Last Update: <main><lastUpdate>"
+    - ""
+    - "<main><bold>Whitelisted</bold>"
+    - " <rail>┃ <muted>Access: <main><access>"
+    - " <rail>┃ <muted>Rank: <main><rank>"
+    - ""
+    - "<main>Left click to stop <secondary><underlined><server></underlined><main>."
+    - "<main>Right click to view analytics."
+  spigot-server-info-offline:
+    - " <rail>┃ <muted>Name: <main><name>"
+    - " <rail>┃ <muted>Version: <main><version>"
+    - " <rail>┃ <muted>Region: <main><region>"
+    - " <rail>┃ <muted>Group: <main><group>"
+    - " <rail>┃ <muted>Port: <main><port>"
+    - ""
+    - "<main><bold>Status</bold>"
+    - " <rail>┃ <muted>Stopped At: <main><stoppedAt>"
+    - " <rail>┃ <muted>Last Online: <main><lastUpdate>"
+    - ""
+    - "<main>Middle click to remove <secondary><underlined><server></underlined><main> from cache."
+    - "<main>Right click to view analytics."
+  proxies-in-group-title: "<main><bold>PROXIES</bold> <rail>» <middle><group>"
+  proxy-server-name: "<main><bold><name></bold>"
+  proxy-server-info-online:
+    - " <rail>┃ <muted>Name: <main><name>"
+    - " <rail>┃ <muted>Version: <main><version>"
+    - " <rail>┃ <muted>Region: <main><region>"
+    - " <rail>┃ <muted>Group: <main><group>"
+    - " <rail>┃ <muted>Port: <main><port>"
+    - ""
+    - "<main><bold>Status </bold><muted>(Uptime: <uptime>)"
+    - " <rail>┃ <muted>Online: <main><online> <muted>(Counting: <countingPlayers><muted>)"
+    - " <rail>┃ <muted>Vanished: <main><vanished>"
+    - " <rail>┃ <muted>Started At: <main><startedAt>"
+    - " <rail>┃ <muted>Last Update: <main><lastUpdate>"
+    - ""
+    - "<main>Right click to view analytics."
+  proxy-server-info-whitelisted:
+    - " <rail>┃ <muted>Name: <main><name>"
+    - " <rail>┃ <muted>Version: <main><version>"
+    - " <rail>┃ <muted>Region: <main><region>"
+    - " <rail>┃ <muted>Group: <main><group>"
+    - " <rail>┃ <muted>Port: <main><port>"
+    - ""
+    - "<main><bold>Status </bold><muted>(Uptime: <uptime>)"
+    - " <rail>┃ <muted>Online: <main><online> <muted>(Counting: <countingPlayers><muted>)"
+    - " <rail>┃ <muted>Vanished: <main><vanished>"
+    - " <rail>┃ <muted>Started At: <main><startedAt>"
+    - " <rail>┃ <muted>Last Update: <main><lastUpdate>"
+    - ""
+    - "<main><bold>Whitelisted</bold>"
+    - " <rail>┃ <muted>Access: <main><access>"
+    - " <rail>┃ <muted>Rank: <main><rank>"
+    - ""
+    - "<main>Right click to view analytics."
+  proxy-server-info-offline:
+    - " <rail>┃ <muted>Name: <main><name>"
+    - " <rail>┃ <muted>Version: <main><version>"
+    - " <rail>┃ <muted>Region: <main><region>"
+    - " <rail>┃ <muted>Group: <main><group>"
+    - " <rail>┃ <muted>Port: <main><port>"
+    - ""
+    - "<main>Status"
+    - " <rail>┃ <muted>Stopped At: <main><stoppedAt>"
+    - " <rail>┃ <muted>Last Online: <main><lastUpdate>"
+    - ""
+    - "<main>Middle click to remove <secondary><underlined><server></underlined><main> from cache."
+    - "<main>Right click to view analytics."
+
+group-info:
+  group-title: "<main><bold>GROUPS</bold>"
+  global-name: "<main><bold>Global Group</bold>"
+  global-lore:
+    - " <rail>┃ <muted>Total Servers: <main><count>"
+    - ""
+    - "<#4ADE80>» <middle>Click to view all servers."
+  group-name: "<main><bold><group></bold>"
+  group-lore:
+    - " <rail>┃ <muted>Total Servers: <main><count>"
+    - ""
+    - "<#4ADE80>» <middle>Click to view servers of this group."
+
+rank-editor-menu:
+  rank-info:
+    - " <rail>┃ <muted>UUID: <main><uuid>"
+    - " <rail>┃ <muted>Name: <main><name>"
+    - " <rail>┃ <muted>Scopes: <main><scopes>"
+    - " <rail>┃ <muted>Priority: <main><priority>"
+    - " <rail>┃ <muted>Grantable: <main><grantable>"
+    - ""
+    - " <rail>┃ <muted>Prefix: <main><prefix> <muted>(Modern: <prefixModern><muted>)"
+    - " <rail>┃ <muted>Playerlist Prefix: <main><playerList> <muted>(Modern: <playerListPrefixModern><muted>)"
+    - " <rail>┃ <muted>Suffix: <main><suffix> <muted>(Modern: <suffixModern><muted>)"
+    - " <rail>┃ <muted>Color: <main><color> <muted>(Modern: <colorModern><muted>)"
+    - " <rail>┃ <muted>Price: <main><price>"
+    - ""
+    - " <rail>┃ <muted>Staff: <main><staff>"
+    - " <rail>┃ <muted>Subscription: <main><subscription>"
+    - " <rail>┃ <muted>Visible: <main><visible>"
+    - " <rail>┃ <muted>Purchasable: <main><purchasable>"
+    - " <rail>┃ <muted>Default: <main><default>"
+  name: "<main><bold>Edit <type></bold>"
+  lore:
+    - ""
+    - " <rail>┃ <middle>Change the <main><type><middle> of this rank."
+    - ""
+    - "<#4ADE80>» <middle>Click to change."
+  permissions-lore:
+    - ""
+    - " <rail>┃ <middle>Change the <main><type><middle> of this rank."
+    - ""
+    - "<#4ADE80>» <middle>Left click to add permissions."
+    - "<main>» <middle>Right click to remove permissions."
+    - "<#FBBF24>» <middle>Middle click to view permissions database."
+
+grant-menu:
+  rank-title: "<main><bold>GRANT</bold> <rail>» <middle><player>"
+  scope-title: "<main><bold>GRANT</bold> <rail>» <middle>Scopes"
+  confirm-title: "<main><bold>GRANT</bold> <rail>» <middle>Confirm"
+  removal-title: "<main><bold>GRANT</bold> <rail>» <middle>Removal"
+  duration-title: "<main><bold>GRANT</bold> <rail>» <middle>Duration"
+  reason-title: "<main><bold>GRANT</bold> <rail>» <middle>Reason"
+  granting-cancelled: "<main>Granting cancelled."
+  grant-removal-cancelled: "<main>Grant removal cancelled."
+  show-ungrantable-ranks: false
+  rank-menu:
+    access-lore:
+      - " <rail>┃ <muted>Priority: <main><priority>"
+      - " <rail>┃ <muted>Prefix: <main><prefix>"
+      - " <rail>┃ <muted>Suffix: <main><suffix>"
+      - " <rail>┃ <muted>Visible: <main><visible>"
+      - " <rail>┃ <muted>Grantable: <main><grantable>"
+      - ""
+      - "<#4ADE80>» <middle>Left click to grant <rank> <middle>to <player><middle>."
+      - "<main>» <middle>Right click to grant with scope selection."
+    no-access-lore:
+      - " <rail>┃ <muted>Priority: <main><priority>"
+      - " <rail>┃ <muted>Prefix: <main><prefix>"
+      - " <rail>┃ <muted>Suffix: <main><suffix>"
+      - " <rail>┃ <muted>Visible: <main><visible>"
+      - " <rail>┃ <muted>Grantable: <main><grantable>"
+      - ""
+      - "<main>You do not have access to this rank."
+  scope-menu:
+    global-name: "<main>Global"
+    global-add-lore:
+      - " <rail>┃ <muted>Scope: <main>Global"
+      - ""
+      - "<#4ADE80>» <middle>Click to add."
+    global-remove-lore:
+      - " <rail>┃ <muted>Scope: <main>Global"
+      - ""
+      - "<main>» <middle>Click to remove."
+    scope-name: "<main><scope>"
+    scope-add-lore:
+      - " <rail>┃ <muted>Scope: <main><scope>"
+      - ""
+      - "<#4ADE80>» <middle>Click to add."
+    scope-remove-lore:
+      - " <rail>┃ <muted>Scope: <main><scope>"
+      - ""
+      - "<main>» <middle>Click to remove."
+    confirm-name: "<#4ADE80><bold>Confirm</bold>"
+    confirm-lore:
+      - " <rail>┃ <muted>Scopes: <main><scopes>"
+      - ""
+      - "<#4ADE80>» <middle>Click to confirm the scope selections."
+  duration-menu:
+    name: "<main><time>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to set."
+  reason-menu:
+    name: "<secondary><reason>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to set."
+    available-reasons:
+      - "Promoted"
+      - "Demoted"
+      - "Addon Rank"
+      - "Famous"
+      - "Giveaway"
+      - "Event"
+      - "Store Issue"
+  confirm-menu:
+    confrim-name: "<#4ADE80><bold>Confirm Action</bold>"
+    confirm-lore:
+      - " <rail>┃ <muted>Player: <main><player>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - " <rail>┃ <muted>Reason: <main><reason>"
+      - " <rail>┃ <muted>Rank: <main><rank>"
+      - " <rail>┃ <muted>Scopes: <main><scopes>"
+      - ""
+      - "<#4ADE80>» <middle>Click to grant."
+    cancel-name: "<main><bold>Cancel Action</bold>"
+    cancel-lore:
+      - " <rail>┃ <muted>Player: <main><player>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - " <rail>┃ <muted>Reason: <main><reason>"
+      - " <rail>┃ <muted>Rank: <main><rank>"
+      - " <rail>┃ <muted>Scopes: <main><scopes>"
+      - ""
+      - "<main>» <middle>Click to cancel."
+
+grants-menu:
+  nice-scope: " <secondary>● <middle><scope>"
+  title: "<main><bold>GRANTS</bold> <rail>» <middle><player>"
+  active-grant:
+    name: "<#4ADE80>+<issuedAt> <#4ADE80>(Active)"
+
+    # This means that the grant is active but not on that specific scope
+    not-on-scope-name: "<#4ADE80>+<issuedAt> <#16A34A>(Not Global)"
+    permanent:
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Rank: <main><rank>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - "<main><bold>Grant Scopes</bold>"
+      - "<niceScopes>"
+    timed:
+      - "<#4ADE80>=<willExpire>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Rank: <main><rank>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - " <rail>┃ <muted>Expires In: <main><expire>"
+      - " <rail>┃ <muted>Will expire on: <main><willExpire>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - "<main><bold>Grant Scopes</bold>"
+      - "<niceScopes>"
+    can-remove:
+      - ""
+      - "<#4ADE80>» <middle>Click to remove."
+    cant-remove:
+      - ""
+      - "<main>You can not remove this grant."
+  inactive-grant:
+    name: "<main>+<issuedAt> (Inactive)"
+    expired-name: "<muted>+<issuedAt> <muted>(Expired)"
+    removed:
+      - "<main>-<removedAt>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Rank: <main><rank>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - " <rail>┃ <muted>Removed By: <main><removedBy>"
+      - " <rail>┃ <muted>Removed On: <main><removedOn>"
+      - " <rail>┃ <muted>Removed Reason: <main><removedReason>"
+      - ""
+      - "<main><bold>Grant Scopes</bold>"
+      - "<niceScopes>"
+    expired:
+      - "<muted>-<removedAt>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Rank: <main><rank>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - "<main><bold>Grant Scopes</bold>"
+      - "<niceScopes>"
+
+grants-history-menu:
+  nice-scope: " <secondary>● <middle><scope>"
+  title: "<main><bold>GRANT HISTORY</bold> <rail>» <middle><player>"
+  active-staff-grant:
+    name: "<#4ADE80>+<issuedAt> (Active)"
+
+    # This means that the grant is active but not on that specific scope
+    not-on-scope-name: "<#16A34A>+<issuedAt> (Not Global)"
+    permanent:
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Rank: <main><rank>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - "<main><bold>Grant Scopes</bold>"
+      - "<niceScopes>"
+    timed:
+      - "<#4ADE80>=<willExpire>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Rank: <main><rank>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - " <rail>┃ <muted>Expires In: <main><expire>"
+      - " <rail>┃ <muted>Will expire on: <main><willExpire>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - "<main><bold>Grant Scopes</bold>"
+      - "<niceScopes>"
+  inactive-staff-grant:
+    name: "<main>+<issuedAt> (Inactive)"
+    expired-name: "<muted>+<issuedAt> (Expired)"
+    removed:
+      - "<main>-<removedAt>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Rank: <main><rank>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - " <rail>┃ <muted>Removed By: <main><removedBy>"
+      - " <rail>┃ <muted>Removed On: <main><removedOn>"
+      - " <rail>┃ <muted>Removed Reason: <main><removedReason>"
+      - ""
+      - "<main><bold>Grant Scopes</bold>"
+      - "<niceScopes>"
+    expired:
+      - "<muted>-<removedAt>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Rank: <main><rank>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - "<main><bold>Grant Scopes</bold>"
+      - "<niceScopes>"
+
+grants-remove-menu:
+  confirm-name: "<#4ADE80><bold>Confirm</bold>"
+  confirm-lore:
+    - " <rail>┃ <muted>Rank: <main><rank>"
+    - ""
+    - "<#4ADE80>» <middle>Click to confirm."
+  cancel-name: "<main><bold>Cancel</bold>"
+  cancel-lore:
+    - " <rail>┃ <muted>Rank: <main><rank>"
+    - ""
+    - "<main>» <middle>Click to cancel."
+
+profile:
+  self-title: "<main><bold>PROFILE</bold>"
+  title: "<main><bold>PROFILE</bold> <rail>» <middle><profile>"
+  use-head-as-item: true
+  profile-item: "SKULL_ITEM"
+  profile-item-damage: 0
+  profile-name: "<profile>"
+  online: "<#4ADE80>Online <muted>(<server>)"
+  offline: "<main>Offline"
+  profile-lore:
+    - ""
+    - "<rail>┃ <muted>Status: <middle><status>"
+    - "<rail>┃ <muted>Level: <middle><level> <rail>(<experience> XP)"
+    - "<rail>┃ <muted>Rank: <middle><rank>"
+    - ""
+    - "<rail>┃ <muted>Name: <middle><color><player>"
+    - "<rail>┃ <muted>Chat: <middle><cc>Hi!"
+    - "<rail>┃ <muted>Tag: <middle><tag>"
+    - ""
+  equipped-cosmetics-button:
+    name: "<gradient:#FF3B6B:#E91E63><bold>Cosmetics</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to view cosmetics."
+    item: "ENDER_CHEST"
+    durability: 0
+  social-media-button:
+    name: "<gradient:#FF3B6B:#E91E63><bold>Social Media</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to view social media of <bright><player><middle>."
+    item: "BOOK"
+    durability: 0
+  settings-button:
+    name: "<gradient:#FF3B6B:#E91E63><bold>Settings</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to view your settings."
+    item: "ITEM_FRAME"
+    durability: 0
+  view-friends-button:
+    name: "<gradient:#FF3B6B:#E91E63><bold>Friends</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to view your friends."
+    item: "SKULL_ITEM"
+    durability: 0
+  report-button:
+    name: "<gradient:#FF3B6B:#E91E63><bold>Report</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to report <bright><player><middle>."
+    item: "NETHER_STAR"
+    durability: 0
+  ignore-button:
+    ignoring-name: "<#4ADE80>Stop Ignoring"
+    not-ignoring-name: "<main>Start Ignoring"
+    not-ignoring-lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to add <bright><player> <middle>to your ignore list."
+    ignoring-lore:
+      - ""
+      - "<main>» <middle>Click to remove <bright><player> <middle>from your ignore list."
+    item: "REDSTONE_BLOCK"
+    durability: 0
+
+admin-profile:
+  menu-size: 45
+  title: "<main><bold>PROFILE</bold> <rail>» <middle><player>"
+  'true': "<#4ADE80>true."
+  'false': "<main>false."
+  disguised: " <muted>(Disguised)"
+  use-head-as-item: true
+  profile-item: "SKULL_ITEM"
+  profile-item-damage: 0
+  profile-slot: 4
+  profile-name: "<profile><disguised>"
+  profile-no-disguised-name: " <rail>┃ <muted>Real Name: <secondary><name>"
+  punishment-type-none: "<muted>Not Punished"
+  profile-lore:
+    - "<noDisguiseName>"
+    - " <rail>┃ <muted>Rank: <secondary><rank> <muted>(<rankDuration>)"
+    - " <rail>┃ <muted>Punished: <punished> <muted>(<punishmentType>)"
+    - " <rail>┃ <middle>2FA: <2fa>"
+    - " <rail>┃ <muted>Security: <security>"
+    - ""
+    - "<main>Login Details"
+    - " <rail>┃ <muted>First Login: <secondary><firstLogin>"
+    - " <rail>┃ <muted>Last Login: <secondary><lastLogin>"
+    - " <rail>┃ <muted>Total Logins: <secondary><logins>"
+
+  # The heading on the left of each row. Purely a label -- clicking one does nothing.
+  # Turn them off for the plain grid.
+  sections:
+    enabled: true
+    item: "STAINED_GLASS_PANE"
+    account-slot: 9
+    account-durability: 5
+    account-name: "<main><bold>Account</bold>"
+    record-slot: 18
+    record-durability: 4
+    record-name: "<main><bold>Record</bold>"
+    checks-slot: 27
+    checks-durability: 3
+    checks-name: "<main><bold>Checks</bold>"
+    actions-slot: 36
+    actions-durability: 14
+    actions-name: "<main><bold>Actions</bold>"
+  grant-history-button:
+    enabled: true
+    slot: 12
+    name: "<gradient:#FF3B6B:#E91E63><bold>Grant History</bold></gradient>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Grants: <secondary><grants>"
+      - ""
+      - "<#4ADE80>» <middle>Click to view grant history of <bright><target><middle>."
+    item: "CARPET"
+    durability: 5
+  staff-history-button:
+    enabled: true
+    slot: 21
+    name: "<gradient:#FF3B6B:#E91E63><bold>Staff History</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to view staff history of <bright><target><middle>."
+    item: "CARPET"
+    durability: 14
+  grants-button:
+    enabled: true
+    slot: 11
+    name: "<gradient:#FF3B6B:#E91E63><bold>Grants</bold></gradient>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Active: <secondary><activeGrants>"
+      - " <rail>┃ <muted>Total: <secondary><grants>"
+      - ""
+      - "<#4ADE80>» <middle>Click to view grants of <bright><target><middle>."
+    item: "INK_SACK"
+    durability: 10
+  history-button:
+    enabled: true
+    slot: 19
+    name: "<gradient:#FF3B6B:#E91E63><bold>History</bold></gradient>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Punishments: <secondary><punishments>"
+      - " <rail>┃ <muted>Still Active: <secondary><activePunishments>"
+      - ""
+      - "<#4ADE80>» <middle>Click to view history of <bright><target><middle>."
+    item: "INK_SACK"
+    durability: 1
+  grant-button:
+    enabled: true
+    slot: 39
+    name: "<gradient:#FF3B6B:#E91E63><bold>Grant</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to grant <bright><target><middle>."
+    item: "WOOL"
+    durability: 5
+  punish-button:
+    enabled: true
+    slot: 41
+    name: "<gradient:#FF3B6B:#E91E63><bold>Punish</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to punish <bright><target><middle>."
+    item: "WOOL"
+    durability: 14
+  command-logs-button:
+    enabled: true
+    slot: 23
+    name: "<gradient:#FF3B6B:#E91E63><bold>Command Logs</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to see command logs of <bright><target><middle>."
+    item: "BOOK_AND_QUILL"
+    durability: 0
+  chat-snapshot-button:
+    enabled: true
+    slot: 25
+    name: "<gradient:#FF3B6B:#E91E63><bold>Chat Snapshots</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to view chat snapshots of <bright><target><middle>."
+    item: "BOOK"
+    durability: 0
+  notes-button:
+    enabled: true
+    slot: 16
+    name: "<gradient:#FF3B6B:#E91E63><bold>Notes</bold></gradient>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Notes: <secondary><notes>"
+      - ""
+      - "<#4ADE80>» <middle>Click to view notes of <bright><target><middle>."
+    item: "PAPER"
+    durability: 0
+  permissions-button:
+    enabled: true
+    slot: 10
+    name: "<gradient:#FF3B6B:#E91E63><bold>Permissions</bold></gradient>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Permissions: <secondary><permissions>"
+      - ""
+      - "<#4ADE80>» <middle>Click to view permissions of <bright><target><middle>."
+    item: "ARROW"
+    durability: 0
+  admin-social-media-button:
+    enabled: true
+    slot: 15
+    name: "<gradient:#FF3B6B:#E91E63><bold>Social Media</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to view social media of <bright><target><middle>."
+    item: "PRISMARINE_SHARD"
+    durability: 0
+  warnings-button:
+    enabled: true
+    slot: 20
+    name: "<gradient:#FF3B6B:#E91E63><bold>Warnings</bold></gradient>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Warnings: <secondary><warnings>"
+      - ""
+      - "<#4ADE80>» <middle>Click to view the warnings of <bright><target><middle>."
+    item: "PAPER"
+    durability: 0
+  playtime-button:
+    enabled: true
+    slot: 14
+    name: "<gradient:#FF3B6B:#E91E63><bold>Playtime</bold></gradient>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Playtime: <secondary><playtime>"
+      - ""
+      - "<#4ADE80>» <middle>Click to view the playtime of <bright><target><middle>."
+    item: "CLOCK"
+    durability: 0
+  chat-logs-button:
+    enabled: true
+    slot: 24
+    name: "<gradient:#FF3B6B:#E91E63><bold>Chat Logs</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to view the chat logs of <bright><target><middle>."
+    item: "WRITABLE_BOOK"
+    durability: 0
+  location-log-button:
+    enabled: true
+    slot: 32
+    name: "<gradient:#FF3B6B:#E91E63><bold>Location Log</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to see where <bright><target><middle> has connected from."
+    item: "COMPASS"
+    durability: 0
+  search-ips-button:
+    enabled: true
+    slot: 31
+    name: "<gradient:#FF3B6B:#E91E63><bold>Address Search</bold></gradient>"
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Click to see every address <bright><target><middle> has used."
+    item: "TRIPWIRE_HOOK"
+    durability: 0
+  alts-button:
+    enabled: true
+    slot: 30
+    name: "<gradient:#FF3B6B:#E91E63><bold>Alts</bold></gradient>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Linked Accounts: <secondary><alts>"
+      - ""
+      - "<#4ADE80>» <middle>Click to view alts of <bright><target><middle>."
+    item: "IRON_AXE"
+    durability: 0
+
+history-menu:
+  title: "<main><bold>HISTORY</bold> <rail>» <middle><player>"
+  type-title: "<main><bold>HISTORY</bold> <rail>» <middle><type> <player>"
+  category-name: "<main><bold><category></bold>"
+  category-lore:
+    - "<muted>View all <bright><category> <muted>that were"
+    - "<muted>executed on <main><player><muted>."
+    - ""
+    - " <rail>┃ <muted>Active: <#4ADE80><active>"
+    - " <rail>┃ <muted>Inactive: <main><inactive>"
+    - " <rail>┃ <muted>Total: <main><total>"
+    - ""
+    - "<#4ADE80>» <middle>Click to view this category."
+  category-lore-with-competitive:
+    - "<muted>View all <bright><category> <muted>that were"
+    - "<muted>executed on <main><player><muted>."
+    - ""
+    - " <rail>┃ <muted>Competitive: <#FBBF24><competitive>"
+    - ""
+    - " <rail>┃ <muted>Active: <#4ADE80><active>"
+    - " <rail>┃ <muted>Inactive: <main><inactive>"
+    - " <rail>┃ <muted>Total: <main><total>"
+    - ""
+    - "<#4ADE80>» <middle>Click to view this category."
+  competitive: "<bright> (Competitive)"
+  shadow: "<rail> (Shadow)"
+  ip: "<muted> (IP)"
+  proof-click:
+    - ""
+    - "<#4ADE80>» <middle>Click to view attached proof."
+  void-reason-unrecorded: "Unrecorded"
+  active-punishment:
+    name: "<#4ADE80>+<issuedAt><ip><shadow><competitive> <#4ADE80>(Active) <bright>[#<punishmentID>]"
+    permanent:
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+    timed:
+      - "<#4ADE80>=<willExpire>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - " <rail>┃ <muted>Expires In: <main><expire>"
+      - " <rail>┃ <muted>Will expire on: <main><willExpire>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+  inactive-punishment:
+    name: "<main>+<issuedAt><ip><shadow><competitive> <main>(Inactive) <bright>[#<punishmentID>]"
+    expired-name: "<muted>+<issuedAt><ip><shadow><competitive> <muted>(Expired) <bright>[#<punishmentID>]"
+    voided-name: "<#FBBF24>+<issuedAt><ip><shadow><competitive> <#FBBF24>(Voided) <bright>[#<punishmentID>]"
+    removed:
+      - "<main>-<removedAt>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - " <rail>┃ <muted>Removed By: <main><removedBy>"
+      - " <rail>┃ <muted>Removed On: <main><removedOn>"
+      - " <rail>┃ <muted>Removed Reason: <main><removedReason>"
+    expired:
+      - "<muted>-<removedAt>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+    voided:
+      - "<#FBBF24>-<removedAt>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - " <rail>┃ <muted>Voided By: <main><removedBy>"
+      - " <rail>┃ <muted>Voided On: <main><removedOn>"
+      - " <rail>┃ <muted>Voided As: <main><voidReason>"
+      - " <rail>┃ <muted>Note: <main><voidNote>"
+
+staff-history-menu:
+  title: "<main><bold>ISSUED</bold>"
+  issued-type-title: "<muted><type>"
+  removed-type-title: "<muted>Removed <type>"
+  category-name: "<main><category>"
+  category-lore:
+    - "<muted>View all <bright><category> <muted>that were"
+    - "<muted>executed by <main><player><muted>."
+    - ""
+    - " <rail>┃ <muted>Active: <#4ADE80><active>"
+    - " <rail>┃ <muted>Inactive: <main><inactive>"
+    - " <rail>┃ <muted>Total: <main><total>"
+    - ""
+    - " <rail>┃ <muted>Affected Users: <main><affectedUsers>"
+    - ""
+    - "<#4ADE80>» <middle>Click to view this category."
+  category-lore-with-competitive:
+    - "<muted>View all <bright><category> <muted>that were"
+    - "<muted>executed by <main><player><muted>."
+    - ""
+    - " <rail>┃ <muted>Competitive: <#FBBF24><competitive>"
+    - ""
+    - " <rail>┃ <muted>Active: <#4ADE80><active>"
+    - " <rail>┃ <muted>Inactive: <main><inactive>"
+    - " <rail>┃ <muted>Total: <main><total>"
+    - ""
+    - " <rail>┃ <muted>Affected Users: <main><affectedUsers>"
+    - ""
+    - "<#4ADE80>» <middle>Click to view this category."
+  competitive: "<#FBBF24> (Competitive)"
+  shadow: "<rail> (Shadow)"
+  ip: "<muted> (IP)"
+  proof-click:
+    - ""
+    - "<#FBBF24>» <middle>Click to view attached proof."
+  active-staff-punishment:
+    name: "<#4ADE80>+<issuedAt><ip><shadow><competitive> <#4ADE80>(Active) <bright>[#<punishmentID>]"
+    permanent:
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+    timed:
+      - "<#4ADE80>=<willExpire>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - " <rail>┃ <muted>Expires In: <main><expire>"
+      - " <rail>┃ <muted>Will expire on: <main><willExpire>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+  inactive-staff-punishment:
+    name: "<main>+<issuedAt><ip><shadow><competitive> <main>(Inactive) <bright>[#<punishmentID>]"
+    expired-name: "<muted>+<issuedAt><ip><shadow><competitive> <muted>(Expired) <bright>[#<punishmentID>]"
+    voided-name: "<#FBBF24>+<issuedAt><ip><shadow><competitive> <#FBBF24>(Voided) <bright>[#<punishmentID>]"
+    removed:
+      - "<main>-<removedAt>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - " <rail>┃ <muted>Removed By: <main><removedBy>"
+      - " <rail>┃ <muted>Removed On: <main><removedOn>"
+      - " <rail>┃ <muted>Removed Reason: <main><removedReason>"
+    expired:
+      - "<muted>-<removedAt>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+    voided:
+      - "<#FBBF24>-<removedAt>"
+      - ""
+      - " <rail>┃ <muted>Target: <main><target>"
+      - " <rail>┃ <muted>Duration: <main><duration>"
+      - ""
+      - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+      - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+      - " <rail>┃ <muted>Issued Reason: <main><reason>"
+      - ""
+      - " <rail>┃ <muted>Voided By: <main><removedBy>"
+      - " <rail>┃ <muted>Voided On: <main><removedOn>"
+      - " <rail>┃ <muted>Voided As: <main><voidReason>"
+      - " <rail>┃ <muted>Note: <main><voidNote>"
+
+disguise-skin-menu:
+  title: "<main><bold>DISGUISE</bold> <rail>» <middle>Skin"
+  skin-name: "<main><skin>"
+  custom-name: "<main>Custom Skin"
+  random-name: "<main>Random Skin"
+  disguise-as-name: "<main>Disguise as <name>"
+
+disguise-rank-menu:
+  title: "<main><bold>DISGUISE</bold> <rail>» <middle>Rank"
+  lore:
+    - ""
+    - " <rail>┃  <player><bright>: Hello Word!"
+    - ""
+    - "<#4ADE80>» <middle>Click to disguise as <rank><bright>."
+
+settings-menu:
+  title: "<main><bold>SETTINGS</bold>"
+  boolean-setting:
+    enabled-name: "<main><bold><name></bold>"
+    enabled-lore:
+      - "<description>"
+      - ""
+      - " <#4ADE80>■ <bright>Enabled"
+      - " <rail>■ <bright>Disabled"
+      - ""
+      - "<#4ADE80>» <middle>Click to disable."
+    disabled-name: "<main><bold><name></bold>"
+    disabled-lore:
+      - "<description>"
+      - ""
+      - " <rail>■ <bright>Enabled"
+      - " <#4ADE80>■ <bright>Disabled"
+      - ""
+      - "<#4ADE80>» <middle>Click to enable."
+    no-permission-enabled:
+      - "<description>"
+      - ""
+      - " <#4ADE80>■ <bright>Enabled"
+      - " <rail>■ <bright>Disabled"
+      - ""
+      - "<main>No permission."
+    no-permission-disabled:
+      - "<description>"
+      - ""
+      - " <rail>■ <bright>Enabled"
+      - " <#4ADE80>■ <bright>Disabled"
+      - ""
+      - "<main>No permission."
+  mutli-option-setting:
+    name: "<main><bold><name></bold>"
+    options-string: " <rail>■ <bright><option>"
+    options-string-selected: " <#4ADE80>■ <bright><option>"
+    lore:
+      - "<description>"
+      - ""
+      - "<options>"
+      - ""
+      - "<#4ADE80>» <middle>Click to change."
+    no-permission-lore:
+      - "<description>"
+      - ""
+      - "<options>"
+      - ""
+      - "<main>No permission."
+  number-setting:
+    # How much should the number change by?
+    change-by: 10
+    name: "<main><bold><name></bold>"
+    lore:
+      - "<description>"
+      - ""
+      - " <rail>■ <bright><number>"
+      - ""
+      - "<#4ADE80>» <middle>Click to change."
+    no-permission:
+      - "<description>"
+      - ""
+      - " <rail>■ <bright><number>"
+      - ""
+      - "<main>No permission."
+  select-option-setting:
+    name: "<#4ADE80><name>"
+    options-string: "<rail>■ <bright><option>"
+    options-string-selected: " <#4ADE80>■ <bright><option>"
+    option-string-selecting: " <secondary>» <rail>■ <bright><option>"
+    option-string-selecting-selected: " <secondary>» <#4ADE80>■ <bright><option>"
+    lore:
+      - "<description>"
+      - ""
+      - "<options>"
+      - ""
+      - "<#4ADE80>» <middle>Left/Right click to scroll."
+      - "<#4ADE80>» <middle>Shift click to select/deselect."
+    no-permission-lore:
+      - "<description>"
+      - ""
+      - "<options>"
+      - ""
+      - "<main>No permission."
+  private-messages:
+    enabled: true
+    material: "WRITABLE_BOOK"
+    name: "Private Messages"
+    description:
+      - " <rail>┃ <middle>Do you want to receive private messages"
+      - " <rail>┃ <middle>from other players?"
+  private-message-sounds:
+    enabled: true
+    material: "NOTE_BLOCK"
+    name: "Private Messages Sounds"
+    description:
+      - " <rail>┃ <middle>Do you want to hear a sound every time you"
+      - " <rail>┃ <middle>receive a private message from other players?"
+  global-chat:
+    enabled: true
+    material: "PAPER"
+    name: "Global Chat"
+    description:
+      - " <rail>┃ <middle>Do you want to be able to chat in global chat?"
+  chat-mention:
+    enabled: true
+    material: "ANVIL"
+    name: "Chat Mention"
+    description:
+      - " <rail>┃ <middle>Do you want to receive a message very"
+      - " <rail>┃ <middle>time your name is mentioned in chat?"
+  tips:
+    enabled: true
+    material: "JUKEBOX"
+    name: "Tips"
+    description:
+      - " <rail>┃ <middle>Do you want to be able to see tips?"
+
+  # Lets a player pick which language Phoenix speaks to them in.
+  # Only shown when a locale overlay is installed under locales/.
+  language:
+    enabled: true
+    material: "PAPER"
+    name: "Language"
+    description:
+      - " <rail>┃ <middle>Which language should we"
+      - " <rail>┃ <middle>speak to you in?"
+  chat-channel:
+    material: "OAK_SIGN"
+    name: "Chat Channel"
+    description:
+      - " <rail>┃ <middle>What channel would you like"
+      - " <rail>┃ <middle>chat in?"
+  staff-messages:
+    material: "PAPER"
+    name: "Staff Messages"
+    description:
+      - " <rail>┃ <middle>What you like to view staff"
+      - " <rail>┃ <middle>messages? (Staff Chat, etc)"
+  filtered-messages:
+    material: "REDSTONE"
+    name: "Filtered Messages"
+    description:
+      - " <rail>┃ <middle>What you like to view"
+      - " <rail>┃ <middle>filtered messages?"
+  admin-alerts:
+    material: "TRIPWIRE_HOOK"
+    name: "Admin Alerts"
+    description:
+      - " <rail>┃ <middle>Would you like to view"
+      - " <rail>┃ <middle>admin alerts?"
+  reports:
+    material: "MAP"
+    name: "Reports"
+    description:
+      - " <rail>┃ <middle>Would you like to view"
+      - " <rail>┃ <middle>reports?"
+  requests:
+    material: "ITEM_FRAME"
+    name: "Requests"
+    description:
+      - " <rail>┃ <middle>Would you like to view"
+      - " <rail>┃ <middle>requests?"
+
+tags-menu:
+  category-name: "<main><bold>Category</bold>"
+  category-lore:
+    - ""
+    - "<list>"
+    - ""
+    - "<#4ADE80>» <middle>Click to change."
+  category-selected: " <#4ADE80>■ <bright>"
+  category-unselected: " <rail>■ <bright>"
+  title: "<main><bold>TAGS</bold>"
+  selected-name: " <muted>(Selected)"
+  name: "<color><name><selected>"
+  access:
+    - ""
+    - "<main><bold>Tag Format:</bold>"
+    - " <rail>┃ <tag>"
+    - ""
+    - "<#4ADE80>» <middle>Click to select."
+  no-access:
+    - ""
+    - "<main><bold>Tag Format:</bold>"
+    - " <rail>┃ <tag>"
+    - ""
+    - "<main>No permission."
+  reset-name: "<main><bold>Remove Tag</bold>"
+  reset-lore:
+    - ""
+    - " <rail>┃ <muted>Selected: <main><tag>"
+    - ""
+    - "<#4ADE80>» <middle>Click to reset."
+
+custom-tags:
+  title: "<main><bold>CUSTOM TAGS</bold>"
+  create-button-name: "<#4ADE80><bold>Create Custom Tag</bold>"
+  create-button-lore:
+    - ""
+    - " <rail>┃ <muted>Tokens: <main><tokens>"
+    - ""
+    - "<#4ADE80>» <middle>Click to create."
+  name: "<tag><middle><selected>"
+  lore:
+    - "<rail><createdOn>"
+    - ""
+    - " <rail>┃ <muted>Status: <main><status>"
+    - ""
+    - "<main><bold>Tag Format:</bold>"
+    - " <rail>┃ <bright><tag>"
+    - ""
+    - "<#4ADE80>» <middle>Click to select."
+    - "<main>Drop to delete."
+
+  # Name and lore for custom tag button in the delete confirmation menu.
+  delete-title: "<main><bold>DELETE TAG</bold> <rail>» <middle><tag>"
+  delete-name: "<bright><tag><middle><selected>"
+  delete-lore:
+    - "<rail><createdOn>"
+    - ""
+    - "<main><bold>Tag Format:</bold>"
+    - " <rail>┃ <bright><tag>"
+  reset-name: "<main><bold>Remove Tag</bold>"
+  reset-lore:
+    - ""
+    - " <rail>┃ <muted>Selected: <bright><tag>"
+    - ""
+    - "<#4ADE80>» <middle>Click to reset."
+  status-accepted: "<#4ADE80>Accepted"
+  status-denied: "<main>Denied"
+  status-undecided: "<#FBBF24>Undecided"
+
+custom-tags-admin:
+  title: "<main><bold>CUSTOM TAGS</bold> <rail>» <middle>Management"
+  name: "<bright><tag>"
+  lore:
+    - "<rail><createdOn>"
+    - ""
+    - " <rail>┃ <muted>Status: <#FBBF24>Awaiting Approval"
+    - " <rail>┃ <muted>Requested By: <main><creator>"
+    - ""
+    - "<main><bold>Tag Format:</bold>"
+    - " <rail>┃ <bright><tag>"
+    - ""
+    - "<#4ADE80>» <middle>Left click to accept."
+    - "<main>» <middle>Right click to deny."
+
+  # Name and lore for custom tag button in the accept confirmation menu.
+  confirmation-title-accept: "<main><bold>ACCEPT TAG</bold> <rail>» <middle><tag>"
+  confirmation-title-deny: "<main><bold>DENY TAG</bold> <rail>» <middle><tag>"
+  confirmation-name: "<bright><tag>"
+  confirmation-lore:
+    - "<rail><createdOn>"
+    - ""
+    - " <rail>┃ <muted>Status: <#FBBF24>Awaiting Approval"
+    - " <rail>┃ <muted>Requested By: <main><creator>"
+    - ""
+    - "<main><bold>Tag Format:</bold>"
+    - " <rail>┃ <bright><tag>"
+
+notifications-menu:
+  unread-lore:
+    - "<notification>"
+    - ""
+    - "<#4ADE80>» <middle>Click to mark as read."
+  lore:
+    - "<notification>"
+    - ""
+    - "<main>You have marked this notification as read."
+  stats-lore:
+    - ""
+    - " <rail>┃ <muted>Viewed By: <main><views>"
+    - " <rail>┃ <muted>Marked as Read By: <main><reads>"
+
+text-editor-menu:
+  save-slot:
+    can-save-name: "<#4ADE80><bold>Save</bold>"
+    cant-save-name: "<main><bold>No Changes Made</bold>"
+    can-save:
+      - ""
+      - "<#4ADE80>» <middle>Click to save."
+    cant-save:
+      - ""
+      - "<muted><italic>You have not made any</italic>"
+      - "<muted><italic>changes and cannot save.</italic>"
+  line-slot:
+    lore:
+      - ""
+      - "<#4ADE80>» <middle>Left click to edit."
+      - "<main>» <middle>Right click to delete."
+
+chatsnapshot-menu:
+  menu-title: "<main><bold>CHAT SNAPSHOTS</bold>"
+  own-menu-title: "<main><bold>YOUR SNAPSHOTS</bold>"
+  snapshot-name: "<main>Snapshot <muted>[<time>]"
+  own-snapshot-lore:
+    - ""
+    - "<main><bold>Information</bold>"
+    - " <rail>┃ <muted>ID: <main><id>"
+  snapshot-lore:
+    - ""
+    - "<main><bold>Information</bold>"
+    - " <rail>┃ <muted>Requested By: <main><requestedBy>"
+    - " <rail>┃ <muted>ID: <main><id>"
+
+punish-menu:
+  title: "<main><bold>PUNISH</bold> <rail>» <middle><player>"
+  item-name: "<main><bold><ladder> (#<nextTimes>)</bold>"
+  snapshot-item-lore:
+    - " <rail>┃ <middle>This ladder will automatically attach a"
+    - " <rail>┃ <middle>chat snapshot to the proof of this punishment."
+    - ""
+    - "<secondary><player><middle> has been punished <secondary><times><middle> by this ladder."
+    - "<decay>"
+    - ""
+    - "<main>Next Punishment"
+    - " <rail>┃ <muted>Type: <secondary><type>"
+    - " <rail>┃ <muted>Duration: <secondary><duration>"
+    - ""
+    - "<#4ADE80>» <middle>Left click to punish <leftAction>."
+    - "<#4ADE80>» <middle>Right click to punish <rightAction>."
+  item-lore:
+    - "<secondary><player><middle> has been punished <secondary><times><middle> by this ladder"
+    - "<decay>"
+    - ""
+    - "<main>Next Punishment"
+    - " <rail>┃ <muted>Type: <secondary><type>"
+    - " <rail>┃ <muted>Duration: <secondary><duration>"
+    - ""
+    - "<#4ADE80>» <middle>Left click to punish <leftAction>."
+    - "<#4ADE80>» <middle>Right click to punish <rightAction>."
+  decay:
+    - ""
+    - "<middle>Due to the decay of this ladder, <player><middle> will be punished"
+    - "<middle>by the ladder in <middle>#<decayed><middle> instead of <middle>#<normal><middle>."
+
+proof-menu:
+  title: "<main><bold>PROOF</bold>"
+  item-name: "<main><type>"
+  item-lore:
+    - " <rail>┃ <muted>Proof: <secondary><proof>"
+    - " <rail>┃ <muted>Added By: <secondary><addedBy>"
+    - ""
+    - "<#4ADE80>» <middle>Click to view."
+
+# The staff list, /onlinestaff.
+online-staff-menu:
+  title: "<main><bold>STAFF ONLINE</bold>"
+  lore:
+    - " <rail>┃ <muted>Playtime: <main><playtime>"
+    - ""
+    - " <rail>┃ <muted>Rank: <main><rank>"
+    - " <rail>┃ <muted>Invisible: <main><isVanished>"
+    - ""
+    - "<#4ADE80>» <middle>Click to teleport."
+
+# Shown to a warned player, on clients that can be held on a screen.
+warn-screen:
+  name: "<main>You have been warned."
+  accept: "<#4ADE80>I understand"
+
+# Shown to a panicked player, on clients that can be held on a screen.
+panic-screen:
+  name: "<main>You are in panic mode."
+
+# Held open in front of a frozen player, if the freeze menu is on.
+freeze-menu:
+  name: "<main>You've been frozen."
+  lore:
+    - "<secondary><strikethrough>---------------------------------</strikethrough>"
+    - "<main>You've been frozen by a staff member!"
+    - "<main>You will be banned if you disconnect."
+    - ""
+    - "<middle>Join our discord: <main>discord.yourname.com"
+    - "<middle>and join a waiting room within <main>5 <middle>minutes."
+    - "<secondary><strikethrough>---------------------------------</strikethrough>"
+
+# The report reason picker, shown by /report.
+report-menu:
+  title: "<main><bold>REPORT</bold> <rail>» <middle>Reason"
+  item-name: "<main><category>"
+
+  # The reason a player types themselves, when custom reasons are on.
+  custom-item-name: "<#FBBF24>Something else"
+  custom-item-lore:
+    - " <rail>┃ <middle>Type the reason yourself."
+    - ""
+    - "<#4ADE80>» <middle>Left click to report <target><middle>."
+  custom-material: "WRITABLE_BOOK"
+
+  # The line above the reasons on the report form.
+  form-subtitle: "<muted>Reporting <bright><target><muted>."
+  item-lore:
+    - " <rail>┃ <middle><description>"
+    - ""
+    - "<#4ADE80>» <middle>Left click to report <target><middle>."
+  close-item-name: "<main>Close"
+  close-item-lore:
+    - " <rail>┃ <middle>Close the menu."
+
+  # If this is false a default paginated menu will be used, otherwise use the layout below
+  custom-layout: true
+
+  # x is a Report Category, # is a border and c is the close button
+  # You can have a maximum of 54 categories in this menu.
+  layout:
+    - "#########"
+    - "# xxxxx #"
+    - "# xxxxx #"
+    - "#   c   #"
+    - "#########"
+
+# The reports staff work through, /reports and /reports-all.
+reports-menu:
+  all-title: "<main><bold>REPORTS</bold>"
+
+  # Shown in place of the punishment lines when the category has no ladder.
+  no-ladder: "<main>No Ladder found."
+
+  # The buttons on the report form, which the menu hid behind right click and drop.
+  evidence-button: "<#4ADE80>View evidence"
+  delete-button: "<main>Delete"
+  back-button: "<muted>Back"
+  title: "<main><bold>REPORTS</bold> <rail>» <middle><target>"
+  name: "<#4ADE80><issuedAt>"
+  open-lore:
+    - " <rail>┃ <muted>Target: <main><target>"
+    - " <rail>┃ <muted>Target On: <main><targetOn>"
+    - ""
+    - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+    - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+    - " <rail>┃ <muted>Issued Reason: <main><reason>"
+    - ""
+    - "<main><bold>Punishment:</bold>"
+    - " <rail>┃ <muted>Type: <main><type>"
+    - " <rail>┃ <muted>Time: <main><time>"
+    - ""
+    - "<#4ADE80>» <middle>Left Click to manage."
+    - "<main>» <middle>Right Click to view evidence."
+  in-progress-lore:
+    - " <rail>┃ <muted>Target: <main><target>"
+    - " <rail>┃ <muted>Target On: <main><targetOn>"
+    - ""
+    - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+    - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+    - " <rail>┃ <muted>Issued Reason: <main><reason>"
+    - ""
+    - " <rail>┃ <muted>Status: <main><status>"
+    - " <rail>┃ <muted>In Progress By: <main><progressBy>"
+    - ""
+    - "<#4ADE80>» <middle>Left Click to manage."
+    - "<main>» <middle>Right Click to view evidence."
+  not-punished-lore:
+    - " <rail>┃ <muted>Target: <main><target>"
+    - " <rail>┃ <muted>Target On: <main><targetOn>"
+    - ""
+    - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+    - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+    - " <rail>┃ <muted>Issued Reason: <main><reason>"
+    - ""
+    - " <rail>┃ <muted>Status: <main><status>"
+    - " <rail>┃ <muted>Punished: <punished>"
+    - " <rail>┃ <muted>Resolved By: <main><resolvedBy>"
+    - ""
+    - "<#4ADE80>» <middle>Right Click to view evidence."
+    - "<main>Drop to delete."
+  punished-lore:
+    - " <rail>┃ <muted>Target: <main><target>"
+    - " <rail>┃ <muted>Target On: <main><targetOn>"
+    - ""
+    - " <rail>┃ <muted>Issued By: <main><issuedBy>"
+    - " <rail>┃ <muted>Issued On: <main><issuedOn>"
+    - " <rail>┃ <muted>Issued Reason: <main><reason>"
+    - ""
+    - "<main><bold>Punishment:</bold>"
+    - " <rail>┃ <muted>Type: <main><type>"
+    - " <rail>┃ <muted>Time: <main><time>"
+    - ""
+    - " <rail>┃ <muted>Status: <main><status>"
+    - " <rail>┃ <muted>Punished By: <main><resolvedBy>"
+    - ""
+    - "<#4ADE80>» <middle>Right click to view evidence."
+    - "<main>Drop to delete."
+  status-button:
+    name: "<status>"
+    lore:
+      - "<bright>Click to update the report status to <status><bright>."
+    punish-lore:
+      - "<main><bold>Punishment:</bold>"
+      - " <rail>┃ <muted>Type: <main><type>"
+      - " <rail>┃ <muted>Time: <main><time>"
+      - ""
+      - "<bright>Click to punish <main><player><bright>."
+  report-status:
+    open: "<#4ADE80>Open"
+    in-progress: "<#FBBF24>In Progress"
+    resolved: "<#60A5FA>Resolved"
+    punished: "<main>Punished"
+
+# The players a pile of reports put on the watchlist, /watchlist.
+watchlist-menu:
+  title: "<main><bold>WATCHLIST</bold>"
+  name: "<player>"
+  lore:
+    - " <rail>┃ <muted>Status: <main><status>"
+    - " <rail>┃ <muted>Reports: <main><reports>"
+    - ""
+    - "<#4ADE80>» <middle>Click to remove."
+
+alts-menu:
+  title: "<main><bold>ALTS</bold> <rail>» <middle><player>"
+  name: "<#4ADE80><player> <muted>[<status><muted>]"
+  lore:
+    - " <rail>┃ <muted>Name: <secondary><name>"
+    - " <rail>┃ <muted>Last Seen: <secondary><lastSeen>"
+    - " <rail>┃ <muted>Last Location: <secondary><country> <muted>(<isp>)"
+    - ""
+    - "<score>"
+    - "<matching>"
+    - "<punishments>"
+    - "<subnetMatch>"
+    - ""
+    - "<name><middle>'s Current IP Info:"
+    - " <rail>┃ <muted>Logins: <secondary><logins>"
+    - " <rail>┃ <muted>First Login: <secondary><firstLogin>"
+    - " <rail>┃ <muted>Last Login: <secondary><lastLogin>"
+    - "<matchingIPInfo>"
+  matching-ip-info:
+    - ""
+    - "<name><middle>'s Matching IP Info <main>(<amount>)<middle>:"
+    - " <rail>┃ <muted>Logins: <main><logins>"
+    - " <rail>┃ <muted>First Login: <main><firstLogin>"
+    - " <rail>┃ <muted>Last Login: <main><lastLogin>"
+  subnet-only-match:
+    - ""
+    - " <rail>┃ <main>The IPs of this player do not match,"
+    - " <rail>┃ <main>however the subnet does match!"
+  ip-matching: "<#4ADE80>Currently matching <bright><player>"
+  ip-not-matching: "<main>Currently not matching <bright><player>"
+  punishment-matching: "<#4ADE80><type> currently matching <bright><player>"
+  punishment-not-matching: "<main><type> currently not matching <bright><player>"
+
+disguise-history-menu:
+  title: "<main><bold>DISGUISE HISTORY</bold> <rail>» <middle><player>"
+  name: "<main><name>"
+  lore:
+    - "<rail><date>"
+    - ""
+    - " <rail>┃ <muted>Rank: <main><rank>"
+    - " <rail>┃ <muted>Skin: <main><skin>"
+
+social-media:
+  self-title: "<main><bold>SOCIAL MEDIA</bold>"
+  title: "<main><bold>SOCIAL MEDIA</bold> <rail>» <middle><profile>"
+  name: "<color><name>"
+  discord-name: "Discord"
+  twitter-name: "Twitter"
+  instagram-name: "Instagram"
+  youtube-name: "YouTube"
+  lore:
+    - " <rail>┃ <middle><current>"
+    - ""
+    - "<#4ADE80>» <middle>Click to get link."
+  self-lore:
+    - " <rail>┃ <middle><current>"
+    - ""
+    - " <rail>┃ <muted>Privacy: <secondary><privacy>"
+    - ""
+    - "<#4ADE80>» <middle>Left click to change link and name."
+    - "<#FBBF24>» <middle>Middle click to change privacy."
+    - "<main>» <middle>Right click to delete link and name."
+
+location-log-menu:
+  title: "<main><bold>LOCATION LOG</bold> <rail>» <middle><player>"
+  name: "<#4ADE80>+<time>"
+  lore:
+    - " <rail>┃ <muted>City: <main><city>"
+    - " <rail>┃ <muted>Region: <main><region>"
+    - " <rail>┃ <muted>Country: <main><country>"
+    - " <rail>┃ <muted>ISP: <main><isp>"
+    - " <rail>┃ <muted>VPN: <main><vpn>"
+
+# The setup board -- what /phoenix setup opens for a player.
+# The area names and the findings themselves are produced by the checks, not read from here.
+setup-menu:
+  title: "<main><bold>PHOENIX SETUP</bold>"
+  feature-title: "<main><bold>SETUP</bold> <rail>» <middle>Features"
+  area-title: "<main><bold>SETUP</bold> <rail>» <middle><area>"
+
+  # The colour and the word each status is drawn with, on both the board and inside an area.
+  status:
+    ok: "<#4ADE80>"
+    ok-label: "Done"
+    todo: "<#7DD3FC>"
+    todo-label: "Not started"
+    warn: "<#FBBF24>"
+    warn-label: "Worth a look"
+    fail: "<main>"
+    fail-label: "Broken"
+
+  # The book at the top of the board. <next> is the area to open first.
+  summary:
+    name: "<main><bold>Phoenix Setup</bold>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Done: <#4ADE80><ok>"
+      - " <rail>┃ <muted>Not started: <#7DD3FC><todo>"
+      - " <rail>┃ <muted>Worth a look: <#FBBF24><warn>"
+      - " <rail>┃ <muted>Broken: <main><fail>"
+      - ""
+      - " <rail>┃ <muted>Next: <main><next>"
+      - ""
+      - "<#4ADE80>» <middle>Click to open it."
+    next-none: "nothing, the essentials are configured"
+    done-lore:
+      - ""
+      - " <rail>┃ <muted>Done: <#4ADE80><ok>"
+      - ""
+      - " <rail>┃ <middle>Every essential area is configured."
+      - " <rail>┃ <middle>Open one to change what it holds."
+
+  # One item per area on the board. <checks> expands to one CHECK line per finding,
+  # each followed by its DETAIL and FIX lines when it has them.
+  area:
+    name: "<status><bold><area></bold>"
+    lore:
+      - ""
+      - "<about>"
+      - ""
+      - "<checks>"
+      - "<#4ADE80>» <middle>Click to open."
+    about: " <rail>┃ <bright><line>"
+    check: " <status>┃ <muted><message>"
+    detail: "   <rail><message>"
+    fix: "   <muted>fix: <bright><fix>"
+    docs: "<#4ADE80>» <middle>Click for the guide on docs.refinedev.org."
+
+  # One item per finding, inside an area.
+  check:
+    name: "<status><bold><label></bold>"
+    lore:
+      - ""
+      - "<message>"
+      - "<detail>"
+      - ""
+      - "<muted>fix: <bright><fix>"
+    no-fix: "<muted>Nothing to do here."
+
+  # The buttons along the bottom of an area. <action> is the name of the change,
+  # and the lore explains what it writes before anything is written.
+  action:
+    name: "<#4ADE80><bold><action></bold>"
+    lore:
+      - ""
+      - "<current>"
+      - "<description>"
+      - ""
+      - "<#4ADE80>» <middle>Click to change."
+    current: " <rail>┃ <muted>Now: <main><value>"
+    description: " <rail>┃ <muted><line>"
+    restart: " <rail>┃ <#FBBF24>Only in effect after a restart."
+
+  # The item shown beside the yes and no buttons, so nothing is replaced unseen.
+  # <lines> expands to the change itself, which the action works out rather than reading here.
+  confirm:
+    title: "<main><bold>SETUP</bold> <rail>» <middle>Apply this change?"
+    name: "<bright><bold><action></bold>"
+    lore:
+      - ""
+      - "<lines>"
+    from: " <rail>┃ <muted>From: <main><value>"
+    to: " <rail>┃ <muted>To: <main><value>"
+    note: " <rail>┃ <muted><note>"
+
+  # What each area is for, in an owner's terms rather than the plugin's.
+  # Read before the findings are, so somebody who has never configured Phoenix
+  # knows what the area is about before being told what is wrong with it.
+  about:
+    storage:
+      - "MongoDB or MySQL holds the profiles, punishments and grants."
+      - "Redis carries them between servers. Nothing works until both answer."
+    identity:
+      - "What this server calls itself. Scoped grants and per-server"
+      - "punishments both target this name, and both fail quietly when it is wrong."
+    ranks:
+      - "The ladder you grant from. Prefixes, permissions, staff lists"
+      - "and staff nametags all read it."
+    colours:
+      - "Three codes every message, menu and MOTD is built from."
+      - "Setting them recolours the whole plugin at once."
+    bypasses:
+      - "Who is exempt from the filters, cooldowns and slowmode."
+      - "Skipped now, this returns as staff who cannot talk in their own slowmode."
+    features:
+      - "What Phoenix is running. There is no correct answer here:"
+      - "a network that uses the reports and nothing else is configured, not broken."
+    config-master:
+      - "Which server owns the wording. The others copy messages, menus"
+      - "and webhooks from it, so an edit made anywhere else is overwritten."
+    reports:
+      - "What players can report each other for. Reports ship switched on"
+      - "with no categories, which is what makes /report open an empty picker."
+    ladders:
+      - "What a second offence costs, and a third. Without a ladder staff"
+      - "guess a duration, and two players doing the same thing get different answers."
+    filters:
+      - "The phrases chat refuses, and what happens to whoever typed one."
+      - "A filter set to punish with no ladder behind it catches and then does nothing."
+    staff-tools:
+      - "The inventory staff moderate from, and the alarm that watches how"
+      - "fast punishments are going out when a staff account is not its owner."
+    two-factor:
+      - "What stands between a stolen staff password and your ban command."
+      - "The one area here whose shipped state is the safe one."
+    alts:
+      - "How second accounts are tied to the first. The weights and the kick"
+      - "threshold have to agree, or evaders walk in and innocents are kicked."
+    anti-vpn:
+      - "Whether joins through a VPN are checked. Read here and acted on by"
+      - "the proxy, so this server can show the settings and nothing else."
+    tags:
+      - "The cosmetic tags players pick between. Never broken -- but the menu"
+      - "is reachable whether or not any exist, and empty reads as a fault."
+    tablist:
+      - "The header, footer and nametags players see. Ships pointing at"
+      - "Phoenix's own Discord and website until you replace it."
+    webhooks:
+      - "The Discord feeds for punishments, reports, grants and staff."
+      - "An empty url fails silently, because nothing was asked for."
+    locales:
+      - "Translations, as overlay files holding only the lines you change."
+      - "One language is a complete answer; this area exists so you know the option is there."
+    metrics:
+      - "Pushing punishment, report and login counts to InfluxDB for Grafana."
+      - "Off is the shipped state and a perfectly good one."
+    modern:
+      - "Settings that need a new enough server: pause-menu links, tab list"
+      - "order, native forms. Each is skipped for clients too old for it."
+
+  # What each feature does, shown on its switch in the Features area.
+  # An owner deciding whether to run something should not have to find its
+  # config section to learn what it is.
+  features:
+    basics:
+      - "Fly, heal, teleports, item tools, gamemodes,"
+      - "broadcasts and tips. Off unregisters all of them."
+    vanish:
+      - "Hides staff from players and from each other,"
+      - "down at the packet level."
+    modmode:
+      - "The moderating inventory staff get on /modmode,"
+      - "with the tools laid out in modmode.yml."
+    freeze:
+      - "Holds a suspected cheater in place while staff"
+      - "talk to them."
+    reports:
+      - "Player reports and help requests, filed under"
+      - "the categories you create."
+    panic:
+      - "Locks a staff account down until another staff"
+      - "member clears it, for a login gone missing."
+    chat-control:
+      - "/clearchat, /mutechat and /slowchat. Moderating"
+      - "the chat itself, not how it is rendered."
+    ban-waves:
+      - "Punishments staged now and landed together later,"
+      - "so a sweep does not warn the next account."
+
+  # Shown in the Storage area, which never asks for credentials in game.
+  read-only:
+    name: "<muted><bold>Nothing to change here</bold>"
+    lore:
+      - ""
+      - " <rail>┃ <middle>Setup never asks for a database or redis"
+      - " <rail>┃ <middle>password in game, because anything typed here"
+      - " <rail>┃ <middle>is written to the chat and command logs."
+      - ""
+      - "<muted>Edit <main><file> <muted>instead."
+
+  # Moves between the two boards: the seven essentials, and one area per feature.
+  tier:
+    to-features-name: "<#7DD3FC><bold>Feature areas</bold>"
+    to-features-lore:
+      - ""
+      - " <rail>┃ <middle>One area per feature, for when you"
+      - " <rail>┃ <middle>are setting that feature up."
+      - ""
+      - "<#4ADE80>» <middle>Click to open."
+    to-essentials-name: "<#4ADE80><bold>Essentials</bold>"
+    to-essentials-lore:
+      - ""
+      - " <rail>┃ <middle>The seven a network cannot open without."
+      - ""
+      - "<#4ADE80>» <middle>Click to open."
+
+  # The walkthrough: from any area, jump to the next one with something left to do.
+  next:
+    name: "<#FBBF24><bold>Next: </bold><main><area>"
+    lore:
+      - ""
+      - " <rail>┃ <muted>Status: <status><label>"
+      - ""
+      - "<#4ADE80>» <middle>Click to go there."
+    none-name: "<#4ADE80><bold>Nothing left here</bold>"
+    none-lore:
+      - ""
+      - " <rail>┃ <middle>Every area on this board is configured."
+      - ""
+      - "<muted>Nothing to jump to."
+  board:
+    name: "<bright><bold>Back to the board</bold>"
+    lore:
+      - ""
+      - " <rail>┃ <middle>Every area at once."
+      - ""
+      - "<#4ADE80>» <middle>Click to go back."
+  refresh:
+    name: "<#FBBF24><bold>Check again</bold>"
+    lore:
+      - ""
+      - " <rail>┃ <middle>Nothing is remembered between opens."
+      - " <rail>┃ <middle>Every status is read fresh."
+      - ""
+      - "<#4ADE80>» <middle>Click to re-run the checks."
+  report:
+    name: "<bright><bold>Print to chat</bold>"
+    lore:
+      - ""
+      - " <rail>┃ <middle>The same findings as text, with the"
+      - " <rail>┃ <middle>fix for each one spelled out."
+      - ""
+      - "<#4ADE80>» <middle>Click to print."
+
+  # The rank picker the Bypasses area opens. Ranks that already hold everything are still listed.
+  bypass:
+    title: "<main><bold>SETUP</bold> <rail>» <middle>Bypasses"
+    rank-name: "<main><bold><rank></bold>"
+    rank-lore:
+      - ""
+      - " <rail>┃ <muted>Missing: <main><missing> <middle>of <main><total>"
+      - ""
+      - "<nodes>"
+      - ""
+      - "<#4ADE80>» <middle>Click to grant the missing ones."
+    node: " <rail>┃ <muted><node>"
+    rank-holds-all-lore:
+      - ""
+      - " <rail>┃ <middle>This rank already holds all <main><total><middle>."
+      - ""
+      - "<muted>Nothing to grant."

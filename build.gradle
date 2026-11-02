@@ -1,0 +1,98 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'eclipse'
+}
+
+group = 'xyz.refinedev.phoenix'
+version = '3.1-34677f1'
+
+def javaVersion = 17
+
+repositories {
+    mavenCentral()
+    maven { url = uri('https://hub.spigotmc.org/nexus/content/repositories/snapshots/') }
+}
+
+configurations {
+    apiGenerator
+}
+
+def generatorClasses = layout.buildDirectory.dir('api-generator/classes')
+tasks.register('compileApiGenerator', JavaCompile) {
+    source = files('gradle/GenerateCompileApis.java')
+    classpath = configurations.apiGenerator
+    destinationDirectory = generatorClasses
+    javaCompiler = javaToolchains.compilerFor { languageVersion = JavaLanguageVersion.of(javaVersion) }
+    options.release = javaVersion
+    options.encoding = 'UTF-8'
+}
+tasks.register('generateCompileApis', JavaExec) {
+    group = 'build setup'
+    description = 'Generates compile-only API headers from text declarations.'
+    dependsOn tasks.named('compileApiGenerator')
+    inputs.dir('gradle/api-signatures')
+    outputs.dir(layout.buildDirectory.dir('compile-apis'))
+    classpath = files(generatorClasses) + configurations.apiGenerator
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(javaVersion) }
+    mainClass = 'GenerateCompileApis'
+    maxHeapSize = '2g'
+    args file('gradle/api-signatures').absolutePath, layout.buildDirectory.dir('compile-apis').get().asFile.absolutePath
+}
+def compileApi = { String name ->
+    files(layout.buildDirectory.file("compile-apis/${name}.jar")).builtBy(tasks.named('generateCompileApis'))
+}
+tasks.register('prepareIde') {
+    group = 'ide'
+    description = 'Generates the compile-only API headers used by the IDE import.'
+    dependsOn tasks.named('generateCompileApis')
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(javaVersion)
+    withSourcesJar()
+}
+
+dependencies {
+    apiGenerator 'org.ow2.asm:asm:9.8'
+    apiGenerator 'com.google.code.gson:gson:2.10.1'
+
+    compileOnly compileApi('phoenix')
+    compileOnly compileApi('phoenix-adapters')
+}
+
+tasks.withType(JavaCompile).configureEach {
+    if (name != 'compileApiGenerator') {
+        dependsOn tasks.named('generateCompileApis')
+    }
+    options.release = javaVersion
+    options.encoding = 'UTF-8'
+    options.compilerArgs += ['-parameters', '-Xmaxerrs', '1000']
+    options.debug = true
+}
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+jar {
+    manifest.attributes('Implementation-Title': 'Phoenix',
+                        'Implementation-Version': project.version)
+}
+
+def nmsApis = ['v1_12_R1': 'phoenix-nms-1', 'v1_16_R3': 'phoenix-nms-1', 'v1_18_R2': 'phoenix-nms-1', 'v1_19_R3': 'phoenix-nms-1', 'v1_20_R3': 'phoenix-nms-2', 'v1_21_R1': 'phoenix-nms-1', 'v1_21_R10': 'phoenix-nms-1', 'v1_7_R4': 'phoenix-nms-1', 'v1_8_R3': 'phoenix-nms-1', 'v_1_20_R4': 'phoenix-nms-1']
+def serverVersions = file('platforms/versions.txt').readLines().findAll { !it.isBlank() }
+serverVersions.each { serverVersion ->
+    def set = sourceSets.create('server_' + serverVersion)
+    set.java.setSrcDirs(['platforms/' + serverVersion + '/src/main/java'])
+    set.resources.setSrcDirs([])
+    set.compileClasspath = compileApi(nmsApis[serverVersion]) + sourceSets.main.output + configurations.compileClasspath
+    tasks.named(set.compileJavaTaskName) { dependsOn tasks.named('classes') }
+    tasks.named('jar') { from set.output; dependsOn tasks.named(set.classesTaskName) }
+    tasks.named('sourcesJar') { from set.allSource }
+}
+
+tasks.named('sourcesJar') {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

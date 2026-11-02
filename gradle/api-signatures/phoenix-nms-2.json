@@ -1,0 +1,1 @@
+{"formatVersion":1,"purpose":"Compile-only API declarations; not runtime implementations","classes":[{"name":"net/minecraft/server/network/PlayerConnection","version":61,"access":33,"superName":"java/lang/Object","methods":[{"name":"a","access":1,"descriptor":"(Lnet/minecraft/network/protocol/Packet;)Z"}]}],"base":"phoenix-nms-1"}
