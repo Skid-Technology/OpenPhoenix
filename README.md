@@ -7,6 +7,8 @@
 </p>
 
 ---
+For Refine Developers: even though some1 of yours reported me on dc for copyright, i'm not removing this vibeslopped and skidded aquacore fork.
+---
 
 <p align="center">
   <a href="https://discord.gg/AEwatvnvSf">https://discord.gg/AEwatvnvSf</a>
